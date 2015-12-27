@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Buyer_CreateMerchantId">
+        <s:complexType />
+      </s:element>
+      <s:element name="Buyer_CreateMerchantIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Buyer_CreateMerchantIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetMerIdForCon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="businessname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetMerIdForConResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetMerIdForConResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetBizname">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="productId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetBiznameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetBiznameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ViewSavedMerchats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="buyerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ViewSavedMerchatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViewSavedMerchatsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSavedMerchant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="businessname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSavedMerchantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchSavedMerchantResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetPhoneInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetPhoneInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetPhoneInformationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetSecurityInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetSecurityInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetSecurityInformationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetOneResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GeneralInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GeneralInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GeneralInformationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetBusnameByProductDescription">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="discription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetBusnameByProductDescriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetBusnameByProductDescriptionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetMerchantId">
+        <s:complexType />
+      </s:element>
+      <s:element name="Merchant_GetMerchantIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetMerchantIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetAllBusinessname">
+        <s:complexType />
+      </s:element>
+      <s:element name="Merchant_GetAllBusinessnameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetAllBusinessnameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Merchant_GetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="Merchant_GetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant_GetAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMerchant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMerchantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMerchantResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Buyer_CreateMerchantIdSoapIn">
+    <wsdl:part name="parameters" element="tns:Buyer_CreateMerchantId" />
+  </wsdl:message>
+  <wsdl:message name="Buyer_CreateMerchantIdSoapOut">
+    <wsdl:part name="parameters" element="tns:Buyer_CreateMerchantIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetMerIdForConSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetMerIdForCon" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetMerIdForConSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetMerIdForConResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetBiznameSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetBizname" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetBiznameSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetBiznameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ViewSavedMerchatsSoapIn">
+    <wsdl:part name="parameters" element="tns:ViewSavedMerchats" />
+  </wsdl:message>
+  <wsdl:message name="ViewSavedMerchatsSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewSavedMerchatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSavedMerchantSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchSavedMerchant" />
+  </wsdl:message>
+  <wsdl:message name="SearchSavedMerchantSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchSavedMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetPhoneInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetPhoneInformation" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetPhoneInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetPhoneInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetSecurityInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetSecurityInformation" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetSecurityInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetSecurityInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetOneSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetOne" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetOneSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GeneralInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GeneralInformation" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GeneralInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GeneralInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetBusnameByProductDescriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetBusnameByProductDescription" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetBusnameByProductDescriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetBusnameByProductDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetMerchantIdSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetMerchantId" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetMerchantIdSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetMerchantIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetAllBusinessnameSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetAllBusinessname" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetAllBusinessnameSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetAllBusinessnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:Merchant_GetAll" />
+  </wsdl:message>
+  <wsdl:message name="Merchant_GetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:Merchant_GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMerchantSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMerchant" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMerchantSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMerchantResponse" />
+  </wsdl:message>
+  <wsdl:portType name="serMerchantSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Buyer_CreateMerchantId">
+      <wsdl:input message="tns:Buyer_CreateMerchantIdSoapIn" />
+      <wsdl:output message="tns:Buyer_CreateMerchantIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerIdForCon">
+      <wsdl:input message="tns:Merchant_GetMerIdForConSoapIn" />
+      <wsdl:output message="tns:Merchant_GetMerIdForConSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBizname">
+      <wsdl:input message="tns:Merchant_GetBiznameSoapIn" />
+      <wsdl:output message="tns:Merchant_GetBiznameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewSavedMerchats">
+      <wsdl:input message="tns:ViewSavedMerchatsSoapIn" />
+      <wsdl:output message="tns:ViewSavedMerchatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSavedMerchant">
+      <wsdl:input message="tns:SearchSavedMerchantSoapIn" />
+      <wsdl:output message="tns:SearchSavedMerchantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetPhoneInformation">
+      <wsdl:input message="tns:Merchant_GetPhoneInformationSoapIn" />
+      <wsdl:output message="tns:Merchant_GetPhoneInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetSecurityInformation">
+      <wsdl:input message="tns:Merchant_GetSecurityInformationSoapIn" />
+      <wsdl:output message="tns:Merchant_GetSecurityInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetOne">
+      <wsdl:input message="tns:Merchant_GetOneSoapIn" />
+      <wsdl:output message="tns:Merchant_GetOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GeneralInformation">
+      <wsdl:input message="tns:Merchant_GeneralInformationSoapIn" />
+      <wsdl:output message="tns:Merchant_GeneralInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBusnameByProductDescription">
+      <wsdl:input message="tns:Merchant_GetBusnameByProductDescriptionSoapIn" />
+      <wsdl:output message="tns:Merchant_GetBusnameByProductDescriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerchantId">
+      <wsdl:input message="tns:Merchant_GetMerchantIdSoapIn" />
+      <wsdl:output message="tns:Merchant_GetMerchantIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAllBusinessname">
+      <wsdl:input message="tns:Merchant_GetAllBusinessnameSoapIn" />
+      <wsdl:output message="tns:Merchant_GetAllBusinessnameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAll">
+      <wsdl:input message="tns:Merchant_GetAllSoapIn" />
+      <wsdl:output message="tns:Merchant_GetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMerchant">
+      <wsdl:input message="tns:UpdateMerchantSoapIn" />
+      <wsdl:output message="tns:UpdateMerchantSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="serMerchantSoap" type="tns:serMerchantSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buyer_CreateMerchantId">
+      <soap:operation soapAction="http://tempuri.org/Buyer_CreateMerchantId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerIdForCon">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetMerIdForCon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBizname">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetBizname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewSavedMerchats">
+      <soap:operation soapAction="http://tempuri.org/ViewSavedMerchats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSavedMerchant">
+      <soap:operation soapAction="http://tempuri.org/SearchSavedMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetPhoneInformation">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetPhoneInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetSecurityInformation">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetSecurityInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetOne">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GeneralInformation">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GeneralInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBusnameByProductDescription">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetBusnameByProductDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerchantId">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetMerchantId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAllBusinessname">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetAllBusinessname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAll">
+      <soap:operation soapAction="http://tempuri.org/Merchant_GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMerchant">
+      <soap:operation soapAction="http://tempuri.org/UpdateMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serMerchantSoap12" type="tns:serMerchantSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buyer_CreateMerchantId">
+      <soap12:operation soapAction="http://tempuri.org/Buyer_CreateMerchantId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerIdForCon">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetMerIdForCon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBizname">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetBizname" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewSavedMerchats">
+      <soap12:operation soapAction="http://tempuri.org/ViewSavedMerchats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSavedMerchant">
+      <soap12:operation soapAction="http://tempuri.org/SearchSavedMerchant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetPhoneInformation">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetPhoneInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetSecurityInformation">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetSecurityInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetOne">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GeneralInformation">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GeneralInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetBusnameByProductDescription">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetBusnameByProductDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetMerchantId">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetMerchantId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAllBusinessname">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetAllBusinessname" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merchant_GetAll">
+      <soap12:operation soapAction="http://tempuri.org/Merchant_GetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMerchant">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMerchant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="serMerchant">
+    <wsdl:port name="serMerchantSoap" binding="tns:serMerchantSoap">
+      <soap:address location="http://dreamshop.apphb.com/WebServices/serMerchant.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serMerchantSoap12" binding="tns:serMerchantSoap12">
+      <soap12:address location="http://dreamshop.apphb.com/WebServices/serMerchant.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

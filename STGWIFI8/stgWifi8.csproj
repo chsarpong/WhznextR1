@@ -1,0 +1,2723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{515272C4-84E4-4ADC-98C5-096891FB30D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>stgWifi8</RootNamespace>
+    <AssemblyName>stgWifi8</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.607, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.7.0607\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.7.0607\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.7.0607\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AboutSTG.aspx" />
+    <Content Include="access-full-knowledge.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\AdminSignIn2.aspx" />
+    <Content Include="Admin\Allbloggers.aspx" />
+    <Content Include="Admin\API.aspx" />
+    <Content Include="Admin\MovieType_GetAll.aspx" />
+    <Content Include="Admin\PostApplications.aspx" />
+    <Content Include="Admin\UpdatePostAppls.aspx" />
+    <Content Include="Advertisers.aspx" />
+    <Content Include="AdvertisingContact.aspx" />
+    <Content Include="AllChannels.aspx" />
+    <Content Include="Aww\Aww.aspx" />
+    <Content Include="BackEndMusic\Music.aspx" />
+    <Content Include="BackEndMusic\MyList.aspx" />
+    <Content Include="BackEndMusic\Radio.aspx" />
+    <Content Include="BackEnd\BackendProducts.aspx" />
+    <Content Include="BackEnd\Merchant.aspx" />
+    <Content Include="BackEnd\MerchantAddress.aspx" />
+    <Content Include="BackEnd\ProductCategory.aspx" />
+    <Content Include="BackEnd\Social-Vote.aspx" />
+    <Content Include="BackEnd\UpdateBlog.aspx" />
+    <Content Include="BackEnd\ViewAllBlogs.aspx" />
+    <Content Include="BackEnd\Vote.aspx" />
+    <Content Include="blog\blog-post\A-look-at-Pat-Fynn%27s-smart-passive-income-business-model.html" />
+    <Content Include="blog\blog-post\Frequently-Asked-Questions.html" />
+    <Content Include="blog\blog-post\how-to-create-a-blog.htm" />
+    <Content Include="blog\colorschemes\light.css" />
+    <Content Include="blog\css\base.css" />
+    <Content Include="blog\css\components.css" />
+    <Content Include="blog\img\Fin_JOE-3.png" />
+    <Content Include="blog\img\light-logo.png" />
+    <Content Include="blog\img\placeholder.gif" />
+    <Content Include="blog\js\main.js" />
+    <Content Include="blog\uploads\230x230_1.jpg" />
+    <Content Include="blog\uploads\230x230_10.jpg" />
+    <Content Include="blog\uploads\230x230_11.jpg" />
+    <Content Include="blog\uploads\230x230_12.jpg" />
+    <Content Include="blog\uploads\230x230_2.jpg" />
+    <Content Include="blog\uploads\230x230_3.jpg" />
+    <Content Include="blog\uploads\230x230_4.jpg" />
+    <Content Include="blog\uploads\230x230_5.jpg" />
+    <Content Include="blog\uploads\230x230_6.jpg" />
+    <Content Include="blog\uploads\230x230_7.jpg" />
+    <Content Include="blog\uploads\230x230_8.jpg" />
+    <Content Include="blog\uploads\230x230_9.jpg" />
+    <Content Include="blog\uploads\380x435_1.jpg" />
+    <Content Include="blog\uploads\460x460_10.jpg" />
+    <Content Include="blog\uploads\460x460_11.jpg" />
+    <Content Include="blog\uploads\460x460_12.jpg" />
+    <Content Include="blog\uploads\460x460_13.jpg" />
+    <Content Include="blog\uploads\460x460_14.jpg" />
+    <Content Include="blog\uploads\460x460_15.jpg" />
+    <Content Include="blog\uploads\460x460_16.jpg" />
+    <Content Include="blog\uploads\460x460_7.jpg" />
+    <Content Include="blog\uploads\460x460_8.jpg" />
+    <Content Include="blog\uploads\460x460_9.jpg" />
+    <Content Include="blog\uploads\480x280_1.jpg" />
+    <Content Include="blog\uploads\480x280_2.jpg" />
+    <Content Include="blog\uploads\480x280_3.jpg" />
+    <Content Include="blog\uploads\480x280_4.jpg" />
+    <Content Include="blog\uploads\680x452_1.jpg" />
+    <Content Include="blog\uploads\680x452_2.jpg" />
+    <Content Include="blog\uploads\680x452_3.jpg" />
+    <Content Include="blog\uploads\680x452_4.jpg" />
+    <Content Include="blog\uploads\680x452_5.jpg" />
+    <Content Include="blog\uploads\720x420_1.jpg" />
+    <Content Include="blog\uploads\720x420_2.jpg" />
+    <Content Include="blog\uploads\720x420_3.jpg" />
+    <Content Include="blog\uploads\80x80_1.jpg" />
+    <Content Include="blog\uploads\80x80_10.jpg" />
+    <Content Include="blog\uploads\80x80_2.jpg" />
+    <Content Include="blog\uploads\80x80_3.jpg" />
+    <Content Include="blog\uploads\80x80_4.jpg" />
+    <Content Include="blog\uploads\80x80_5.jpg" />
+    <Content Include="blog\uploads\80x80_6.jpg" />
+    <Content Include="blog\uploads\80x80_7.jpg" />
+    <Content Include="blog\uploads\80x80_8.jpg" />
+    <Content Include="blog\uploads\80x80_9.jpg" />
+    <Content Include="blog\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="blog\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="blog\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="blog\vendor\jquery-1.10.1.min.js" />
+    <Content Include="blog\vendor\jquery.unveil.min.js" />
+    <Content Include="blog\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="blog\vendor\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="blog\vendor\prettyPhoto\jquery.prettyPhoto.js" />
+    <Content Include="business-community\promote-offer.aspx" />
+    <Content Include="business-community\register-merchant-account.aspx" />
+    <Content Include="code-prettify-master\CHANGES.html" />
+    <Content Include="code-prettify-master\examples\quine.html" />
+    <Content Include="code-prettify-master\js-modules\combinePrefixPatterns.js" />
+    <Content Include="code-prettify-master\js-modules\externs.js" />
+    <Content Include="code-prettify-master\js-modules\extractSourceSpans.js" />
+    <Content Include="code-prettify-master\js-modules\extractSourceSpans_test.html" />
+    <Content Include="code-prettify-master\js-modules\numberLines.js" />
+    <Content Include="code-prettify-master\js-modules\numberLines_test.html" />
+    <Content Include="code-prettify-master\js-modules\prettify.js" />
+    <Content Include="code-prettify-master\js-modules\recombineTagsAndDecorations.js" />
+    <Content Include="code-prettify-master\js-modules\recombineTagsAndDecorations_test.html" />
+    <Content Include="code-prettify-master\js-modules\run_prettify.js" />
+    <Content Include="code-prettify-master\loader\lang-aea.js" />
+    <Content Include="code-prettify-master\loader\lang-agc.js" />
+    <Content Include="code-prettify-master\loader\lang-apollo.js" />
+    <Content Include="code-prettify-master\loader\lang-basic.js" />
+    <Content Include="code-prettify-master\loader\lang-cbm.js" />
+    <Content Include="code-prettify-master\loader\lang-cl.js" />
+    <Content Include="code-prettify-master\loader\lang-clj.js" />
+    <Content Include="code-prettify-master\loader\lang-css.js" />
+    <Content Include="code-prettify-master\loader\lang-dart.js" />
+    <Content Include="code-prettify-master\loader\lang-el.js" />
+    <Content Include="code-prettify-master\loader\lang-erl.js" />
+    <Content Include="code-prettify-master\loader\lang-erlang.js" />
+    <Content Include="code-prettify-master\loader\lang-fs.js" />
+    <Content Include="code-prettify-master\loader\lang-go.js" />
+    <Content Include="code-prettify-master\loader\lang-hs.js" />
+    <Content Include="code-prettify-master\loader\lang-latex.js" />
+    <Content Include="code-prettify-master\loader\lang-lisp.js" />
+    <Content Include="code-prettify-master\loader\lang-ll.js" />
+    <Content Include="code-prettify-master\loader\lang-llvm.js" />
+    <Content Include="code-prettify-master\loader\lang-lsp.js" />
+    <Content Include="code-prettify-master\loader\lang-lua.js" />
+    <Content Include="code-prettify-master\loader\lang-matlab.js" />
+    <Content Include="code-prettify-master\loader\lang-ml.js" />
+    <Content Include="code-prettify-master\loader\lang-mumps.js" />
+    <Content Include="code-prettify-master\loader\lang-n.js" />
+    <Content Include="code-prettify-master\loader\lang-nemerle.js" />
+    <Content Include="code-prettify-master\loader\lang-pascal.js" />
+    <Content Include="code-prettify-master\loader\lang-proto.js" />
+    <Content Include="code-prettify-master\loader\lang-r.js" />
+    <Content Include="code-prettify-master\loader\lang-rd.js" />
+    <Content Include="code-prettify-master\loader\lang-rkt.js" />
+    <Content Include="code-prettify-master\loader\lang-s.js" />
+    <Content Include="code-prettify-master\loader\lang-scala.js" />
+    <Content Include="code-prettify-master\loader\lang-scm.js" />
+    <Content Include="code-prettify-master\loader\lang-Splus.js" />
+    <Content Include="code-prettify-master\loader\lang-sql.js" />
+    <Content Include="code-prettify-master\loader\lang-ss.js" />
+    <Content Include="code-prettify-master\loader\lang-tcl.js" />
+    <Content Include="code-prettify-master\loader\lang-tex.js" />
+    <Content Include="code-prettify-master\loader\lang-vb.js" />
+    <Content Include="code-prettify-master\loader\lang-vbs.js" />
+    <Content Include="code-prettify-master\loader\lang-vhd.js" />
+    <Content Include="code-prettify-master\loader\lang-vhdl.js" />
+    <Content Include="code-prettify-master\loader\lang-wiki.js" />
+    <Content Include="code-prettify-master\loader\lang-xq.js" />
+    <Content Include="code-prettify-master\loader\lang-xquery.js" />
+    <Content Include="code-prettify-master\loader\lang-yaml.js" />
+    <Content Include="code-prettify-master\loader\lang-yml.js" />
+    <Content Include="code-prettify-master\loader\prettify.css" />
+    <Content Include="code-prettify-master\loader\prettify.js" />
+    <Content Include="code-prettify-master\loader\run_prettify.js" />
+    <Content Include="code-prettify-master\loader\skins\desert.css" />
+    <Content Include="code-prettify-master\loader\skins\doxy.css" />
+    <Content Include="code-prettify-master\loader\skins\sons-of-obsidian.css" />
+    <Content Include="code-prettify-master\loader\skins\sunburst.css" />
+    <Content Include="code-prettify-master\src\lang-apollo.js" />
+    <Content Include="code-prettify-master\src\lang-basic.js" />
+    <Content Include="code-prettify-master\src\lang-clj.js" />
+    <Content Include="code-prettify-master\src\lang-css.js" />
+    <Content Include="code-prettify-master\src\lang-dart.js" />
+    <Content Include="code-prettify-master\src\lang-erlang.js" />
+    <Content Include="code-prettify-master\src\lang-go.js" />
+    <Content Include="code-prettify-master\src\lang-hs.js" />
+    <Content Include="code-prettify-master\src\lang-lisp.js" />
+    <Content Include="code-prettify-master\src\lang-llvm.js" />
+    <Content Include="code-prettify-master\src\lang-lua.js" />
+    <Content Include="code-prettify-master\src\lang-matlab.js" />
+    <Content Include="code-prettify-master\src\lang-ml.js" />
+    <Content Include="code-prettify-master\src\lang-mumps.js" />
+    <Content Include="code-prettify-master\src\lang-n.js" />
+    <Content Include="code-prettify-master\src\lang-pascal.js" />
+    <Content Include="code-prettify-master\src\lang-proto.js" />
+    <Content Include="code-prettify-master\src\lang-r.js" />
+    <Content Include="code-prettify-master\src\lang-rd.js" />
+    <Content Include="code-prettify-master\src\lang-scala.js" />
+    <Content Include="code-prettify-master\src\lang-sql.js" />
+    <Content Include="code-prettify-master\src\lang-tcl.js" />
+    <Content Include="code-prettify-master\src\lang-tex.js" />
+    <Content Include="code-prettify-master\src\lang-vb.js" />
+    <Content Include="code-prettify-master\src\lang-vhdl.js" />
+    <Content Include="code-prettify-master\src\lang-wiki.js" />
+    <Content Include="code-prettify-master\src\lang-xq.js" />
+    <Content Include="code-prettify-master\src\lang-yaml.js" />
+    <Content Include="code-prettify-master\src\prettify.css" />
+    <Content Include="code-prettify-master\src\prettify.js" />
+    <Content Include="code-prettify-master\src\run_prettify.js" />
+    <Content Include="code-prettify-master\styles\demo.html" />
+    <Content Include="code-prettify-master\styles\desert.css" />
+    <Content Include="code-prettify-master\styles\doxy.css" />
+    <Content Include="code-prettify-master\styles\index.html" />
+    <Content Include="code-prettify-master\styles\sons-of-obsidian.css" />
+    <Content Include="code-prettify-master\styles\sunburst.css" />
+    <Content Include="code-prettify-master\tests\debug-ie-compat-matrix.html" />
+    <Content Include="code-prettify-master\tests\ie-newline-copy-paste.html" />
+    <Content Include="code-prettify-master\tests\large_input_test.html" />
+    <Content Include="code-prettify-master\tests\prettify_test.html" />
+    <Content Include="code-prettify-master\tests\prettify_test_2.html" />
+    <Content Include="code-prettify-master\tests\run_prettify_test.html" />
+    <Content Include="code-prettify-master\tests\test_base.js" />
+    <Content Include="code-prettify-master\tests\test_styles.css" />
+    <Content Include="code-prettify-master\tools\closure-compiler\amd-externs.js" />
+    <Content Include="code-prettify-master\tools\closure-compiler\compiler.jar" />
+    <Content Include="code-prettify-master\tools\closure-compiler\console-externs.js" />
+    <Content Include="code-prettify-master\tools\yui-compressor\LICENSE.TXT" />
+    <Content Include="code-prettify-master\tools\yui-compressor\yuicompressor-2.4.4.jar" />
+    <Content Include="Images\300x250-darkshopify.jpg" />
+    <Content Include="Images\728x90-lightebookshopify.jpg" />
+    <Content Include="Images\942094_10201262667717863_1909732827_n.jpg" />
+    <Content Include="Images\Background_28.7.2015.jpg" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\KingstonDigital Ships.jpg" />
+    <Content Include="Images\Kingston_microDuo_Pack.jpg" />
+    <Content Include="Images\MOTHER%27SDAY4.png" />
+    <Content Include="Images\product-1book.jpg" />
+    <Content Include="Images\Side29.7.2015.jpg" />
+    <Content Include="Opps.htm" />
+    <Content Include="Styles\demo.css" />
+    <Content Include="summarize\html-light\A-look-at-Pat-Fynn%27s-smart-passive-income-business-model.html" />
+    <Content Include="summarize\html-light\banner-single10.html" />
+    <Content Include="summarize\html-light\banner-single11.html" />
+    <Content Include="summarize\html-light\banner-single13.html" />
+    <Content Include="summarize\html-light\banner-single14.html" />
+    <Content Include="summarize\html-light\banner-single15.html" />
+    <Content Include="summarize\html-light\banner-single16.htm" />
+    <Content Include="summarize\html-light\banner-single18.htm" />
+    <Content Include="summarize\html-light\banner-single19.html" />
+    <Content Include="summarize\html-light\banner-single20.html" />
+    <Content Include="summarize\html-light\banner-single3.html" />
+    <Content Include="BlogStream.aspx" />
+    <Content Include="BMovies\BMovies.aspx" />
+    <Content Include="bootstrap-3.3.2-dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap-3.3.2-dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap-3.3.2-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-3.3.2-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-3.3.2-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-3.3.2-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-3.3.2-dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap-3.3.2-dist\js\npm.js" />
+    <Content Include="BuildingEffNetwork\BENHome.aspx" />
+    <Content Include="BuildingEffNetwork\BENPage1.aspx" />
+    <Content Include="BuildingEffNetwork\BENPage2.aspx" />
+    <Content Include="BuildingEffNetwork\Images\happiness.jpg" />
+    <Content Include="BuildingEffNetwork\Images\selfesteem.jpg" />
+    <Content Include="BuildingEffNetwork\Images\stock-photo-26778205-another-success.jpg" />
+    <Content Include="BuildingEffNetwork\Images\stock-photo-28104534-young-girl-ignoring-her-family-while-listening-to-music.jpg" />
+    <Content Include="CreateInternetRadio\InternetRadio.aspx" />
+    <Content Include="CurrentWiFiImplementation.aspx" />
+    <Content Include="Finnish\Kirjaudu.aspx" />
+    <Content Include="FitnessAndNutrition\FitnessAndNutrition.aspx" />
+    <Content Include="FitnessAndNutrition\Images\FiveBadFitHabbit.jpg" />
+    <Content Include="FitnessAndNutrition\Images\HealthySleepHabits.jpg" />
+    <Content Include="FitnessAndNutrition\Images\nutritionfordum.jpg" />
+    <Content Include="FitnessAndNutrition\Images\stock-photo-13078264-woman-choosing-between-healthy-food-and-caloric-cake.jpg" />
+    <Content Include="FitnessAndNutrition\Images\stock-photo-14227614-scales-and-high-calorie-food.jpg" />
+    <Content Include="FitnessAndNutrition\Images\stock-photo-20778541-food-background.jpg" />
+    <Content Include="FitnessAndNutrition\Images\stock-photo-21063406-backache.jpg" />
+    <Content Include="FitnessAndNutrition\Images\stock-photo-24085464-mother-spoon-feeding-her-baby-girl.jpg" />
+    <Content Include="FunnyImgs.aspx" />
+    <Content Include="Funny\Funny.aspx" />
+    <Content Include="Gaming\Gaming.aspx" />
+    <Content Include="Gaming\Image\lego.jpg" />
+    <Content Include="GhanaNews\images\tv-control-roomfuture.jpg" />
+    <Content Include="GhanaNews\Page1.aspx" />
+    <Content Include="GhanaNews\Page2.aspx" />
+    <Content Include="GhanaNews\Page3.aspx" />
+    <Content Include="GhanaNews\Page4.aspx" />
+    <Content Include="GhanaNews\Page5.aspx" />
+    <Content Include="GhanaNews\Page6.aspx" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_000_glass.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_001_leaf.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_002_dog.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_003_user.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_004_girl.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_005_car.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_006_user_add.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_007_user_remove.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_008_film.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_009_magic.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_010_envelope.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_011_camera.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_012_heart.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_013_beach_umbrella.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_014_train.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_015_print.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_016_bin.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_017_music.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_018_note.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_019_heart_empty.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_020_home.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_021_snowflake.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_022_fire.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_023_magnet.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_024_parents.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_025_binoculars.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_026_road.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_027_search.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_028_cars.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_029_notes_2.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_030_pencil.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_031_bus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_032_wifi_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_033_luggage.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_034_old_man.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_035_woman.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_036_file.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_037_coins.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_038_airplane.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_039_notes.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_040_stats.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_041_charts.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_042_pie_chart.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_043_group.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_044_keys.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_045_calendar.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_046_router.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_047_camera_small.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_048_dislikes.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_049_star.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_050_link.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_051_eye_open.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_052_eye_close.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_053_alarm.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_054_clock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_055_stopwatch.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_056_projector.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_057_history.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_058_truck.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_059_cargo.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_060_compass.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_061_keynote.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_062_paperclip.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_063_power.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_064_lightbulb.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_065_tag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_066_tags.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_067_cleaning.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_068_ruller.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_069_gift.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_070_umbrella.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_071_book.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_072_bookmark.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_073_wifi.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_074_cup.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_075_stroller.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_076_headphones.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_077_headset.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_078_warning_sign.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_079_signal.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_080_retweet.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_081_refresh.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_082_roundabout.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_083_random.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_084_heat.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_085_repeat.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_086_display.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_087_log_book.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_088_address_book.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_089_building.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_090_eyedropper.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_091_adjust.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_092_tint.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_093_crop.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_094_vector_path_square.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_095_vector_path_circle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_096_vector_path_polygon.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_097_vector_path_line.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_098_vector_path_curve.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_099_vector_path_all.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_100_font.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_101_italic.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_102_bold.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_103_text_underline.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_104_text_strike.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_105_text_height.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_106_text_width.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_107_text_resize.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_108_left_indent.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_109_right_indent.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_110_align_left.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_111_align_center.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_112_align_right.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_113_justify.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_114_list.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_115_text_smaller.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_116_text_bigger.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_117_embed.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_118_embed_close.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_119_table.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_120_message_full.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_121_message_empty.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_122_message_in.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_123_message_out.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_124_message_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_125_message_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_126_message_ban.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_127_message_flag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_128_message_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_129_message_new.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_130_inbox.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_131_inbox_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_132_inbox_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_133_inbox_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_134_inbox_in.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_135_inbox_out.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_136_cogwheel.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_137_cogwheels.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_138_picture.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_139_adjust_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_140_database_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_141_database_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_142_database_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_143_database_ban.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_144_folder_open.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_145_folder_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_146_folder_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_147_folder_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_148_folder_flag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_149_folder_new.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_150_edit.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_151_new_window.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_152_check.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_153_unchecked.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_154_more_windows.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_155_show_big_thumbnails.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_156_show_thumbnails.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_157_show_thumbnails_with_lines.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_158_show_lines.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_159_playlist.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_160_imac.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_161_macbook.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_162_ipad.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_163_iphone.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_164_iphone_transfer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_165_iphone_exchange.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_166_ipod.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_167_ipod_shuffle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_168_ear_plugs.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_169_record.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_170_step_backward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_171_fast_backward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_172_rewind.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_173_play.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_174_pause.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_175_stop.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_176_forward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_177_fast_forward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_178_step_forward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_179_eject.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_180_facetime_video.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_181_download_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_182_mute.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_183_volume_down.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_184_volume_up.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_185_screenshot.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_186_move.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_187_more.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_188_brightness_reduce.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_189_brightness_increase.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_190_circle_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_191_circle_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_192_circle_remove.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_193_circle_ok.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_194_circle_question_mark.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_195_circle_info.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_196_circle_exclamation_mark.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_197_remove.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_198_ok.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_199_ban.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_200_download.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_201_upload.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_202_shopping_cart.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_203_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_204_unlock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_205_electricity.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_206_ok_2.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_207_remove_2.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_208_cart_out.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_209_cart_in.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_210_left_arrow.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_211_right_arrow.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_212_down_arrow.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_213_up_arrow.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_214_resize_small.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_215_resize_full.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_216_circle_arrow_left.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_217_circle_arrow_right.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_218_circle_arrow_top.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_219_circle_arrow_down.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_220_play_button.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_221_unshare.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_222_share.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_223_chevron-right.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_224_chevron-left.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_225_bluetooth.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_226_euro.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_227_usd.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_228_gbp.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_229_retweet_2.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_230_moon.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_231_sun.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_232_cloud.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_233_direction.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_234_brush.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_235_pen.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_236_zoom_in.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_237_zoom_out.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_238_pin.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_239_albums.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_240_rotation_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_241_flash.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_242_google_maps.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_243_anchor.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_244_conversation.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_245_chat.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_246_male.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_247_female.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_248_asterisk.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_249_divide.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_250_snorkel_diving.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_251_scuba_diving.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_252_oxygen_bottle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_253_fins.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_254_fishes.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_255_boat.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_256_delete.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_257_sheriffs_star.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_258_qrcode.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_259_barcode.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_260_pool.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_261_buoy.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_262_spade.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_263_bank.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_264_vcard.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_265_electrical_plug.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_266_flag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_267_credit_card.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_268_keyboard_wireless.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_269_keyboard_wireless.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_270_shield.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_271_ring.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_272_cake.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_273_drink.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_274_beer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_275_fast_food.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_276_cutlery.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_277_pizza.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_278_birthday_cake.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_279_tablet.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_280_settings.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_281_bullets.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_282_cardio.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_283_t-shirt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_284_pants.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_285_sweater.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_286_fabric.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_287_leather.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_288_scissors.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_289_bomb.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_290_skull.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_291_celebration.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_292_tea_kettle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_293_french_press.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_294_coffe_cup.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_295_pot.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_296_grater.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_297_kettle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_298_hospital.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_299_hospital_h.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_300_microphone.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_301_webcam.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_302_temple_christianity_church.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_303_temple_islam.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_304_temple_hindu.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_305_temple_buddhist.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_306_bicycle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_307_life_preserver.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_308_share_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_309_comments.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_310_flower.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_311_baseball.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_312_rugby.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_313_ax.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_314_table_tennis.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_315_bowling.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_316_tree_conifer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_317_tree_deciduous.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_318_more_items.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_319_sort.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_320_filter.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_321_gamepad.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_322_playing_dices.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_323_calculator.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_324_tie.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_325_wallet.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_326_piano.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_327_sampler.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_328_podium.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_329_soccer_ball.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_330_blog.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_331_dashboard.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_332_certificate.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_333_bell.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_334_candle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_335_pushpin.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_336_iphone_shake.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_337_pin_flag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_338_turtle.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_339_rabbit.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_340_globe.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_341_briefcase.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_342_hdd.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_343_thumbs_up.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_344_thumbs_down.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_345_hand_right.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_346_hand_left.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_347_hand_up.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_348_hand_down.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_349_fullscreen.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_350_shopping_bag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_351_book_open.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_352_nameplate.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_353_nameplate_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_354_vases.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_355_bullhorn.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_356_dumbbell.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_357_suitcase.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_358_file_import.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_359_file_export.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_360_bug.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_361_crown.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_362_smoking.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_363_cloud_upload.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_364_cloud_download.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_365_restart.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_366_security_camera.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_367_expand.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_368_collapse.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_369_collapse_top.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_370_globe_af.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_371_global.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_372_spray.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_373_nails.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_374_claw_hammer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_375_classic_hammer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_376_hand_saw.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_377_riflescope.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_378_electrical_socket_eu.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_379_electrical_socket_us.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_380_message_forward.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_381_coat_hanger.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_382_dress.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_383_bathrobe.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_384_shirt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_385_underwear.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_386_log_in.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_387_log_out.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_388_exit.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_389_new_window_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_390_video_sd.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_391_video_hd.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_392_subtitles.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_393_sound_stereo.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_394_sound_dolby.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_395_sound_5_1.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_396_sound_6_1.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_397_sound_7_1.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_398_copyright_mark.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_399_registration_mark.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_400_radar.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_401_skateboard.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_402_golf_course.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_403_sorting.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_404_sort-by-alphabet.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_405_sort-by-alphabet-alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_406_sort-by-order.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_407_sort-by-order-alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_408_sort-by-attributes.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_409_sort-by-attributes-alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_410_compressed.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_411_package.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_412_cloud_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_413_cloud_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_414_disk_save.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_415_disk_open.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_416_disk_saved.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_417_disk_remove.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_418_disk_import.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_419_disk_export.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_420_tower.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_421_send.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_422_git_branch.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_423_git_create.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_424_git_private.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_425_git_delete.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_426_git_merge.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_427_git_pull_request.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_428_git_compare.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_429_git_commit.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_430_construction_cone.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_431_shoe_steps.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_432_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_433_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_434_redo.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_435_undo.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_436_golf.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_437_hockey.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_438_pipe.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_439_wrench.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_440_folder_closed.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_441_phone_alt.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_442_earphone.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_443_floppy_disk.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_444_floppy_saved.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_445_floppy_remove.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_446_floppy_save.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_447_floppy_open.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_448_translate.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_449_fax.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_450_factory.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_451_shop_window.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_452_shop.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_453_kiosk.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_454_kiosk_wheels.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_455_kiosk_light.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_456_kiosk_food.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_457_transfer.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_458_money.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_459_header.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_460_blacksmith.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_461_saw_blade.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_462_basketball.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_463_server.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_464_server_plus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_465_server_minus.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_466_server_ban.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_467_server_flag.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_468_server_lock.png" />
+    <Content Include="glyphicons_free\glyphicons\png\glyphicons_469_server_new.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_00_pinterest.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_01_dropbox.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_02_google_plus.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_03_jolicloud.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_04_yahoo.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_05_blogger.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_06_picasa.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_07_amazon.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_08_tumblr.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_09_wordpress.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_10_instapaper.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_11_evernote.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_12_xing.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_13_zootool.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_14_dribbble.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_15_deviantart.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_16_read_it_later.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_17_linked_in.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_18_forrst.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_19_pinboard.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_20_behance.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_21_github.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_22_youtube.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_23_skitch.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_24_4square.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_25_quora.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_26_badoo.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_27_spotify.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_28_stumbleupon.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_29_readability.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_30_facebook.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_31_twitter.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_32_instagram.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_33_posterous_spaces.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_34_vimeo.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_35_flickr.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_36_last_fm.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_37_rss.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_38_skype.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_39_e-mail.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_40_vine.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_41_myspace.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_42_goodreads.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_43_apple.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_44_windows.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_45_yelp.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_46_playstation.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_47_xbox.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_48_android.png" />
+    <Content Include="glyphicons_free\glyphicons_social\png\glyphicons_social_49_ios.png" />
+    <Content Include="glyphicons_free\_changelog.txt" />
+    <Content Include="glyphicons_free\_readme_first.txt" />
+    <Content Include="HealthyLiving\HealthyLiving.aspx" />
+    <Content Include="Images\01_Base_Stand_Antenna.JPG" />
+    <Content Include="Images\02_Base-2-op.jpg" />
+    <Content Include="Images\04_Attachment-op.jpg" />
+    <Content Include="Images\05_Base-To-Attachment-1-op.jpg" />
+    <Content Include="Images\06_Base-To-Attachment-2-op.jpg" />
+    <Content Include="Images\08_Top-To-Antenna-2-op.jpg" />
+    <Content Include="FitnessAndNutrition\Images\286198-mar25_exercisefood.jpg" />
+    <Content Include="Images\8046779592_a82a098a3e_z.jpg" />
+    <Content Include="Images\ABC_flight_simulator_kab_140317_16x9_992.jpg" />
+    <Content Include="Images\ABC_plane_crash_jef_140110_16x9_992.jpg" />
+    <Content Include="Images\Ad-8.gif" />
+    <Content Include="Images\Ad-88.gif" />
+    <Content Include="Images\Ad-Changes.gif" />
+    <Content Include="Images\Ad-DataTraveller55.gif" />
+    <Content Include="Images\Ad-DataTraveller.gif" />
+    <Content Include="Images\Akon.jpg" />
+    <Content Include="Images\apple-iphone-6-concept.png" />
+    <Content Include="Images\Assa.jpg" />
+    <Content Include="Images\backgfordv.png" />
+    <Content Include="Images\best_of_yelp.png" />
+    <Content Include="Images\bkground.png" />
+    <Content Include="Images\blog.jpg" />
+    <Content Include="Images\btn-app-store.png" />
+    <Content Include="Images\Business_10.png" />
+    <Content Include="Images\Classrom.jpg" />
+    <Content Include="Images\disco-party.jpg" />
+    <Content Include="Images\FiFa.jpg" />
+    <Content Include="Images\freedom.jpg" />
+    <Content Include="Images\Gabe.jpg" />
+    <Content Include="Images\Gabe2.jpg" />
+    <Content Include="Images\give-wifi-bg6.png" />
+    <Content Include="Images\Gradient background using CSS.jpg" />
+    <Content Include="Images\guidetoconference.jpg" />
+    <Content Include="Images\hyperloop.jpg" />
+    <Content Include="Images\ilkka-peter.jpg" />
+    <Content Include="Images\IMG_0195.JPG" />
+    <Content Include="Images\intro-bike.jpg" />
+    <Content Include="Images\intro-fence.jpg" />
+    <Content Include="Images\intro-guitar.jpg" />
+    <Content Include="Images\intro-ipad.jpg" />
+    <Content Include="Images\letsgo2.jpg" />
+    <Content Include="Images\lg-g-flex-610x343.jpg" />
+    <Content Include="Images\listening-to-mp3-player.jpg" />
+    <Content Include="Images\LossWeight.png" />
+    <Content Include="Images\low-res.jpg" />
+    <Content Include="Images\Lumia-925-hero-slideshow-jpg.jpg" />
+    <Content Include="Images\Messenger.jpg" />
+    <Content Include="Images\miclogo_276419_20528438720_2044766422_q.jpg" />
+    <Content Include="Careers.aspx" />
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Friends.aspx" />
+    <Content Include="Images\007.jpg" />
+    <Content Include="Images\8020select.png" />
+    <Content Include="Images\about-nexus-family.png" />
+    <Content Include="Images\adoptahydrant.png" />
+    <Content Include="Images\breakingnews.png" />
+    <Content Include="Images\browser-icon-chrome.png" />
+    <Content Include="Images\browser-icon-firefox.png" />
+    <Content Include="Images\browser-icon-safari.png" />
+    <Content Include="Images\fleetio.png" />
+    <Content Include="Images\fromtheappstore_hero.png" />
+    <Content Include="Images\gathercontent.png" />
+    <Content Include="Images\girlpp.jpeg" />
+    <Content Include="Images\jshint.png" />
+    <Content Include="Images\kippt.png" />
+    <Content Include="Images\mark-zuckerberg_65x65.jpg" />
+    <Content Include="Images\messaging-bg.jpg" />
+    <Content Include="Images\model_s_germany3.jpg" />
+    <Content Include="Images\n-FACEBOOK-LAPTOP-large570.jpg" />
+    <Content Include="Images\Nanoloco.png" />
+    <Content Include="Images\newss.png" />
+    <Content Include="Images\Nokia-Drive.jpg" />
+    <Content Include="Images\Nokia-Lumia-820-front.png" />
+    <Content Include="Images\Nokia-Lumia-820-product-hero-2-jpg.jpg" />
+    <Content Include="Images\Nokia-Lumia920NFC.jpg" />
+    <Content Include="Images\path-logo%402x_03e856b94022e704f62dc4d21f182e6b1a35debc.png" />
+    <Content Include="Images\pathvideo.jpg" />
+    <Content Include="Images\prostitution.jpg" />
+    <Content Include="Images\putin.jpg" />
+    <Content Include="Images\ravnsupercell.jpg" />
+    <Content Include="Images\sean-parker_65x65.jpg" />
+    <Content Include="Images\searchicon.png" />
+    <Content Include="Images\SendCredit.png" />
+    <Content Include="Images\shop.jpg" />
+    <Content Include="Images\slide-01.jpg" />
+    <Content Include="Images\slide-02.jpg" />
+    <Content Include="Images\slide-03.jpg" />
+    <Content Include="Images\smayak.png" />
+    <Content Include="Images\solarcity_ebay.jpg" />
+    <Content Include="Images\soundready.png" />
+    <Content Include="Images\STGLogo3.png" />
+    <Content Include="Images\stg_mikrotik-login-backg.png" />
+    <Content Include="Images\stock-photo-19221214-apply-.jpg" />
+    <Content Include="Images\stock-photo-23646347-student-friends-with-digital-tablet.jpg" />
+    <Content Include="Images\Tech-Package55.gif" />
+    <Content Include="Images\time-for-music.jpg" />
+    <Content Include="Images\TOD-54.gif" />
+    <Content Include="Images\topic_iphone_4s.png" />
+    <Content Include="Images\TranformerV2.png" />
+    <Content Include="Images\UnivGh.jpg" />
+    <Content Include="Images\Untitled01.png" />
+    <Content Include="Images\Untitled4.png" />
+    <Content Include="Images\wifi-hotspot-signs.jpg" />
+    <Content Include="Images\WifiIm.jpg" />
+    <Content Include="Images\wireless.png" />
+    <Content Include="jquery\themes\base\ui.theme2.css" />
+    <Content Include="MyBlogSignIn.aspx" />
+    <Content Include="nevermisspost.png" />
+    <Content Include="PostSuccessful.aspx" />
+    <Content Include="Relationship\Images\womenshealth.jpg" />
+    <Content Include="Images\young-man-listening-to-music.jpg" />
+    <Content Include="Images\_71148311_ronaldo464.jpg" />
+    <Content Include="Images\_72116411_bendable.jpg" />
+    <Content Include="Images\_72116625_vortex1.jpg" />
+    <Content Include="InvestorRelations.aspx" />
+    <Content Include="jquery\AUTHORS.txt" />
+    <Content Include="jquery\external\bgiframe\ChangeLog.txt" />
+    <Content Include="jquery\external\bgiframe\docs\index.html" />
+    <Content Include="jquery\external\bgiframe\jquery.bgiframe.js" />
+    <Content Include="jquery\external\bgiframe\jquery.bgiframe.min.js" />
+    <Content Include="jquery\external\bgiframe\jquery.bgiframe.pack.js" />
+    <Content Include="jquery\external\bgiframe\test\index.html" />
+    <Content Include="jquery\external\cookie\jquery.cookie.js" />
+    <Content Include="jquery\external\cookie\jquery.cookie.min.js" />
+    <Content Include="jquery\external\cookie\jquery.cookie.pack.js" />
+    <Content Include="jquery\external\jsdiff\jsdiff.js" />
+    <Content Include="jquery\external\qunit\testrunner.js" />
+    <Content Include="jquery\external\qunit\testsuite.css" />
+    <Content Include="jquery\external\simulate\jquery.simulate.js" />
+    <Content Include="jquery\GPL-LICENSE.txt" />
+    <Content Include="jquery\jquery-1.3.2.js" />
+    <Content Include="jquery\MIT-LICENSE.txt" />
+    <Content Include="jquery\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery\themes\base\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="jquery\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery\themes\base\jquery-ui.css" />
+    <Content Include="jquery\themes\base\ui.accordion.css" />
+    <Content Include="jquery\themes\base\ui.all.css" />
+    <Content Include="jquery\themes\base\ui.base.css" />
+    <Content Include="jquery\themes\base\ui.core.css" />
+    <Content Include="jquery\themes\base\ui.datepicker.css" />
+    <Content Include="jquery\themes\base\ui.dialog.css" />
+    <Content Include="jquery\themes\base\ui.progressbar.css" />
+    <Content Include="jquery\themes\base\ui.resizable.css" />
+    <Content Include="jquery\themes\base\ui.slider.css" />
+    <Content Include="jquery\themes\base\ui.tabs.css" />
+    <Content Include="jquery\themes\base\ui.theme.css" />
+    <Content Include="jquery\ui\effects.blind.js" />
+    <Content Include="jquery\ui\effects.bounce.js" />
+    <Content Include="jquery\ui\effects.clip.js" />
+    <Content Include="jquery\ui\effects.core.js" />
+    <Content Include="jquery\ui\effects.drop.js" />
+    <Content Include="jquery\ui\effects.explode.js" />
+    <Content Include="jquery\ui\effects.fold.js" />
+    <Content Include="jquery\ui\effects.highlight.js" />
+    <Content Include="jquery\ui\effects.pulsate.js" />
+    <Content Include="jquery\ui\effects.scale.js" />
+    <Content Include="jquery\ui\effects.shake.js" />
+    <Content Include="jquery\ui\effects.slide.js" />
+    <Content Include="jquery\ui\effects.transfer.js" />
+    <Content Include="jquery\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ar.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-bg.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ca.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-cs.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-da.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-de.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-el.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-eo.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-es.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-fa.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-fi.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-fr.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-he.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-hr.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-hu.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-hy.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-id.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-is.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-it.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ja.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ko.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-lt.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-lv.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ms.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-nl.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-no.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-pl.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-pt-BR.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ro.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-ru.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sk.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sl.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sq.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sr-SR.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sr.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-sv.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-th.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-tr.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-uk.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-zh-CN.js" />
+    <Content Include="jquery\ui\i18n\ui.datepicker-zh-TW.js" />
+    <Content Include="jquery\ui\jquery-ui.js" />
+    <Content Include="jquery\ui\minified\effects.blind.min.js" />
+    <Content Include="jquery\ui\minified\effects.bounce.min.js" />
+    <Content Include="jquery\ui\minified\effects.clip.min.js" />
+    <Content Include="jquery\ui\minified\effects.core.min.js" />
+    <Content Include="jquery\ui\minified\effects.drop.min.js" />
+    <Content Include="jquery\ui\minified\effects.explode.min.js" />
+    <Content Include="jquery\ui\minified\effects.fold.min.js" />
+    <Content Include="jquery\ui\minified\effects.highlight.min.js" />
+    <Content Include="jquery\ui\minified\effects.pulsate.min.js" />
+    <Content Include="jquery\ui\minified\effects.scale.min.js" />
+    <Content Include="jquery\ui\minified\effects.shake.min.js" />
+    <Content Include="jquery\ui\minified\effects.slide.min.js" />
+    <Content Include="jquery\ui\minified\effects.transfer.min.js" />
+    <Content Include="jquery\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ar.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-bg.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ca.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-cs.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-da.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-de.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-el.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-eo.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-es.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-fa.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-fi.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-fr.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-he.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-hr.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-hu.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-hy.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-id.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-is.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-it.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ja.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ko.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-lt.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-lv.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ms.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-nl.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-no.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-pl.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-pt-BR.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ro.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-ru.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sk.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sl.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sq.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sr-SR.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sr.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-sv.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-th.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-tr.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-uk.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-zh-CN.min.js" />
+    <Content Include="jquery\ui\minified\i18n\ui.datepicker-zh-TW.min.js" />
+    <Content Include="jquery\ui\minified\jquery-ui.min.js" />
+    <Content Include="jquery\ui\minified\ui.accordion.min.js" />
+    <Content Include="jquery\ui\minified\ui.core.min.js" />
+    <Content Include="jquery\ui\minified\ui.datepicker.min.js" />
+    <Content Include="jquery\ui\minified\ui.dialog.min.js" />
+    <Content Include="jquery\ui\minified\ui.draggable.min.js" />
+    <Content Include="jquery\ui\minified\ui.droppable.min.js" />
+    <Content Include="jquery\ui\minified\ui.progressbar.min.js" />
+    <Content Include="jquery\ui\minified\ui.resizable.min.js" />
+    <Content Include="jquery\ui\minified\ui.selectable.min.js" />
+    <Content Include="jquery\ui\minified\ui.slider.min.js" />
+    <Content Include="jquery\ui\minified\ui.sortable.min.js" />
+    <Content Include="jquery\ui\minified\ui.tabs.min.js" />
+    <Content Include="jquery\ui\ui.accordion.js" />
+    <Content Include="jquery\ui\ui.core.js" />
+    <Content Include="jquery\ui\ui.datepicker.js" />
+    <Content Include="jquery\ui\ui.dialog.js" />
+    <Content Include="jquery\ui\ui.draggable.js" />
+    <Content Include="jquery\ui\ui.droppable.js" />
+    <Content Include="jquery\ui\ui.progressbar.js" />
+    <Content Include="jquery\ui\ui.resizable.js" />
+    <Content Include="jquery\ui\ui.selectable.js" />
+    <Content Include="jquery\ui\ui.slider.js" />
+    <Content Include="jquery\ui\ui.sortable.js" />
+    <Content Include="jquery\ui\ui.tabs.js" />
+    <Content Include="jquery\version.txt" />
+    <Content Include="LifeStyle.aspx" />
+    <Content Include="MessagAndCalls.aspx" />
+    <Content Include="MikrotikLogin\coverage.html" />
+    <Content Include="MikrotikLogin\fin02.html" />
+    <Content Include="MikrotikLogin\free.html" />
+    <Content Include="MikrotikLogin\images\stgwifisplash01.png" />
+    <Content Include="MikrotikLogin\images\stgwifisplash02.png" />
+    <Content Include="MikrotikLogin\images\stgwifisplash03.png" />
+    <Content Include="MikrotikLogin\images\stgwifisplash04.png" />
+    <Content Include="MikrotikLogin\img\backg3.png" />
+    <Content Include="MikrotikLogin\img\backgfordv.png" />
+    <Content Include="MikrotikLogin\img\stglogolg.png" />
+    <Content Include="MikrotikLogin\img\stglogosm.png" />
+    <Content Include="MikrotikLogin\img\stgwifihotspotimg.png" />
+    <Content Include="MikrotikLogin\js\initrotator.js" />
+    <Content Include="MikrotikLogin\js\jquery.js" />
+    <Content Include="MikrotikLogin\js\mhrotator.css" />
+    <Content Include="MikrotikLogin\js\mhrotator.js" />
+    <Content Include="MikrotikLogin\js\roundbutton.png" />
+    <Content Include="MikrotikLogin\js\shadowb.png" />
+    <Content Include="MikrotikLogin\js\shadowbl.png" />
+    <Content Include="MikrotikLogin\js\shadowbls.png" />
+    <Content Include="MikrotikLogin\js\shadowbr.png" />
+    <Content Include="MikrotikLogin\js\shadowbrs.png" />
+    <Content Include="MikrotikLogin\js\shadowbs.png" />
+    <Content Include="MikrotikLogin\js\shadowl.png" />
+    <Content Include="MikrotikLogin\js\shadowls.png" />
+    <Content Include="MikrotikLogin\js\shadowr.png" />
+    <Content Include="MikrotikLogin\js\shadowrs.png" />
+    <Content Include="MikrotikLogin\js\shadowt.png" />
+    <Content Include="MikrotikLogin\js\shadowtl.png" />
+    <Content Include="MikrotikLogin\js\shadowtls.png" />
+    <Content Include="MikrotikLogin\js\shadowtr.png" />
+    <Content Include="MikrotikLogin\js\shadowtrs.png" />
+    <Content Include="MikrotikLogin\js\shadowts.png" />
+    <Content Include="MikrotikLogin\login.html" />
+    <Content Include="MikrotikLogin\logout.html" />
+    <Content Include="MikrotikLogin\services.html" />
+    <Content Include="MikrotikLogin\shops.html" />
+    <Content Include="MikrotikLogin\status.html" />
+    <Content Include="MikrotikLogin\stgwifi splashfo.html" />
+    <Content Include="Movies.aspx" />
+    <Content Include="MusicPage1.aspx" />
+    <Content Include="MusicPage10.aspx" />
+    <Content Include="MusicPage11.aspx" />
+    <Content Include="MusicPage2.aspx" />
+    <Content Include="MusicPage3.aspx" />
+    <Content Include="MusicPage4.aspx" />
+    <Content Include="MusicPage5.aspx" />
+    <Content Include="MusicPage6.aspx" />
+    <Content Include="MusicPage7.aspx" />
+    <Content Include="MusicPage8.aspx" />
+    <Content Include="MusicPage9.aspx" />
+    <Content Include="Music\SHATTA WALE-STATE BURIAL%2825TH DECEMBER 2013%29.mp3" />
+    <Content Include="MyBlog.aspx" />
+    <Content Include="Navbar.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="NewsAfrica.aspx" />
+    <Content Include="NewsGhana.aspx" />
+    <Content Include="NewsSports.aspx" />
+    <Content Include="PersonalFinance\Personalfinance.aspx" />
+    <Content Include="Pics\Pics.aspx" />
+    <Content Include="ProductFound.aspx" />
+    <Content Include="Products\DataTraveller.aspx" />
+    <Content Include="Relationship\Relationship.aspx" />
+    <Content Include="RSS.aspx" />
+    <Content Include="SalesAndMarketing\SalesAndMarketing.aspx" />
+    <Content Include="Scripts\autoScroll.js" />
+    <Content Include="Scripts\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Sponsor.aspx" />
+    <Content Include="Start.htm" />
+    <Content Include="StartUp\StartUp.aspx" />
+    <Content Include="STGShop.aspx" />
+    <Content Include="Images\000002582505_HDFlashVideo.mp4" />
+    <Content Include="Finnish\Finnish.Master" />
+    <Content Include="Styles\Navbar.css" />
+    <Content Include="summarize\colorschemes\light.css" />
+    <Content Include="summarize\css\base.css" />
+    <Content Include="summarize\css\components.css" />
+    <Content Include="summarize\html-light\banner-index.html" />
+    <Content Include="summarize\html-light\banner-single.html" />
+    <Content Include="summarize\html-light\banner-single2.html" />
+    <Content Include="summarize\html-light\banner-single4.html" />
+    <Content Include="summarize\html-light\banner-single5.html" />
+    <Content Include="summarize\html-light\banner-single6.html" />
+    <Content Include="summarize\html-light\banner-single7.html" />
+    <Content Include="summarize\html-light\banner-single8.html" />
+    <Content Include="summarize\html-light\banner-single9.html" />
+    <Content Include="summarize\html-light\blog-grids.html" />
+    <Content Include="summarize\html-light\blog.html" />
+    <Content Include="summarize\html-light\blog2.html" />
+    <Content Include="summarize\html-light\components.html" />
+    <Content Include="summarize\html-light\Help.html" />
+    <Content Include="summarize\html-light\index-2.html" />
+    <Content Include="summarize\html-light\index.html" />
+    <Content Include="summarize\html-light\Knowing-what-to-ignore.html" />
+    <Content Include="summarize\html-light\review.html" />
+    <Content Include="summarize\html-light\reviews.html" />
+    <Content Include="summarize\html-light\single-banner12.html" />
+    <Content Include="summarize\html-light\single-full.html" />
+    <Content Include="summarize\html-light\single-full2.html" />
+    <Content Include="summarize\html-light\single.html" />
+    <Content Include="summarize\html-light\Ways-to-Validate-a-Product-Idea-Before-You-Waste-Your-Time-Submitting.html" />
+    <Content Include="summarize\img\Fin_JOE-3.png" />
+    <Content Include="summarize\img\light-logo.png" />
+    <Content Include="summarize\img\placeholder.gif" />
+    <Content Include="summarize\js\main.js" />
+    <Content Include="summarize\uploads\230x230_1.jpg" />
+    <Content Include="summarize\uploads\230x230_10.jpg" />
+    <Content Include="summarize\uploads\230x230_11.jpg" />
+    <Content Include="summarize\uploads\230x230_12.jpg" />
+    <Content Include="summarize\uploads\230x230_2.jpg" />
+    <Content Include="summarize\uploads\230x230_3.jpg" />
+    <Content Include="summarize\uploads\230x230_4.jpg" />
+    <Content Include="summarize\uploads\230x230_5.jpg" />
+    <Content Include="summarize\uploads\230x230_6.jpg" />
+    <Content Include="summarize\uploads\230x230_7.jpg" />
+    <Content Include="summarize\uploads\230x230_8.jpg" />
+    <Content Include="summarize\uploads\230x230_9.jpg" />
+    <Content Include="summarize\uploads\380x435_1.jpg" />
+    <Content Include="summarize\uploads\460x460_10.jpg" />
+    <Content Include="summarize\uploads\460x460_11.jpg" />
+    <Content Include="summarize\uploads\460x460_12.jpg" />
+    <Content Include="summarize\uploads\460x460_13.jpg" />
+    <Content Include="summarize\uploads\460x460_14.jpg" />
+    <Content Include="summarize\uploads\460x460_15.jpg" />
+    <Content Include="summarize\uploads\460x460_16.jpg" />
+    <Content Include="summarize\uploads\460x460_7.jpg" />
+    <Content Include="summarize\uploads\460x460_8.jpg" />
+    <Content Include="summarize\uploads\460x460_9.jpg" />
+    <Content Include="summarize\uploads\480x280_1.jpg" />
+    <Content Include="summarize\uploads\480x280_2.jpg" />
+    <Content Include="summarize\uploads\480x280_3.jpg" />
+    <Content Include="summarize\uploads\480x280_4.jpg" />
+    <Content Include="summarize\uploads\680x452_1.jpg" />
+    <Content Include="summarize\uploads\680x452_2.jpg" />
+    <Content Include="summarize\uploads\680x452_3.jpg" />
+    <Content Include="summarize\uploads\680x452_4.jpg" />
+    <Content Include="summarize\uploads\680x452_5.jpg" />
+    <Content Include="summarize\uploads\720x420_1.jpg" />
+    <Content Include="summarize\uploads\720x420_2.jpg" />
+    <Content Include="summarize\uploads\720x420_3.jpg" />
+    <Content Include="summarize\uploads\80x80_1.jpg" />
+    <Content Include="summarize\uploads\80x80_10.jpg" />
+    <Content Include="summarize\uploads\80x80_2.jpg" />
+    <Content Include="summarize\uploads\80x80_3.jpg" />
+    <Content Include="summarize\uploads\80x80_4.jpg" />
+    <Content Include="summarize\uploads\80x80_5.jpg" />
+    <Content Include="summarize\uploads\80x80_6.jpg" />
+    <Content Include="summarize\uploads\80x80_7.jpg" />
+    <Content Include="summarize\uploads\80x80_8.jpg" />
+    <Content Include="summarize\uploads\80x80_9.jpg" />
+    <Content Include="summarize\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="summarize\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="summarize\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="summarize\vendor\jquery-1.10.1.min.js" />
+    <Content Include="summarize\vendor\jquery.unveil.min.js" />
+    <Content Include="summarize\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="summarize\vendor\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="summarize\vendor\prettyPhoto\jquery.prettyPhoto.js" />
+    <Content Include="Terms.aspx" />
+    <Content Include="Theme 16\Advetise.html" />
+    <Content Include="Theme 16\assets\css\bootstrap.css" />
+    <Content Include="Theme 16\assets\css\ionicons.min.css" />
+    <Content Include="Theme 16\assets\css\style.css" />
+    <Content Include="Theme 16\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Theme 16\assets\fonts\ioniconsbab9.svg" />
+    <Content Include="Theme 16\assets\img\blog01.jpg" />
+    <Content Include="Theme 16\assets\img\blog02.jpg" />
+    <Content Include="Theme 16\assets\img\blog03.jpg" />
+    <Content Include="Theme 16\assets\img\favicon.html" />
+    <Content Include="Theme 16\assets\img\header.jpg" />
+    <Content Include="Theme 16\assets\img\ISHomepageBG.mp4" />
+    <Content Include="Theme 16\assets\img\phone.png" />
+    <Content Include="Theme 16\assets\img\side.jpg" />
+    <Content Include="Theme 16\assets\js\bootstrap.min.js" />
+    <Content Include="Theme 16\assets\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="Theme 16\assets\js\jquery.min.js" />
+    <Content Include="Theme 16\assets\js\retina-1.1.0.js" />
+    <Content Include="Theme 16\index.html" />
+    <Content Include="Theme 16\Join-Business-Community.html" />
+    <Content Include="Users\AllRegisteredUsers.aspx" />
+    <Content Include="Webservices\Merchant.asmx" />
+    <Content Include="Webservices\ProductCategory.asmx" />
+    <Content Include="WiFi\LocationLogIns.aspx" />
+    <Content Include="WiFi\WiFiPlan.aspx" />
+    <Content Include="Navbar.Master" />
+    <None Include="bootstrap-3.3.2-dist\css\bootstrap-theme.css.map" />
+    <None Include="bootstrap-3.3.2-dist\css\bootstrap.css.map" />
+    <None Include="bootstrap-3.3.2-dist\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="bootstrap-3.3.2-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="bootstrap-3.3.2-dist\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="bootstrap-3.3.2-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="code-prettify-master\.gitignore" />
+    <None Include="code-prettify-master\COPYING" />
+    <None Include="code-prettify-master\distrib\prettify-small.tar.bz2" />
+    <None Include="code-prettify-master\distrib\prettify-small.tgz" />
+    <Content Include="code-prettify-master\distrib\prettify-small.zip" />
+    <None Include="code-prettify-master\docs\getting_started.md" />
+    <None Include="code-prettify-master\js-modules\js_include.pl" />
+    <None Include="code-prettify-master\js-modules\regexpPrecederPatterns.pl" />
+    <None Include="code-prettify-master\Makefile" />
+    <None Include="code-prettify-master\README.md" />
+    <None Include="code-prettify-master\tests\test_in_node" />
+    <None Include="code-prettify-master\tools\closure-compiler\COPYING" />
+    <None Include="code-prettify-master\tools\closure-compiler\README" />
+    <None Include="code-prettify-master\tools\lang-handler-aliases.sh" />
+    <None Include="code-prettify-master\tools\yui-compressor\README" />
+    <None Include="Documentation\STGWireless Business Model Canvas_SN_v0 1 - Charles-n.odt" />
+    <None Include="glyphicons_free\glyphicons\png\Thumbs.db" />
+    <None Include="Theme 16\assets\img\ISHomepageBG.webm" />
+    <None Include="Web References\com.apphb.stgwifipathMyList\MyList.wsdl" />
+    <None Include="Web References\com.apphb.stgwifipathMyList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="STGShop2.aspx" />
+    <Content Include="STGSignIn2.aspx" />
+    <None Include="Web References\com.stgwifiMerchantAddress\MerchantAddress.wsdl" />
+    <None Include="Web References\com.stgwifiMerchantAddress\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiMerchant\Merchant.wsdl" />
+    <None Include="Web References\com.stgwifiMerchant\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiMusic\Music.wsdl" />
+    <None Include="Web References\com.stgwifiMusic\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiProductCategory\ProductCategory.wsdl" />
+    <None Include="Web References\com.stgwifiProductCategory\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiProduct\Product.wsdl" />
+    <None Include="Web References\com.stgwifiProduct\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiRadio\Radio.wsdl" />
+    <None Include="Web References\com.stgwifiRadio\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiStory\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiStory\Story.wsdl" />
+    <None Include="Web References\com.stgwifiUsers\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.stgwifiUsers\Users.wsdl" />
+    <None Include="Web References\MerchantAddressService\MerchantAddress.wsdl" />
+    <None Include="Web References\MerchantAddressService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MerchantService\Merchant.wsdl" />
+    <None Include="Web References\MerchantService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MusicService\Music.wsdl" />
+    <None Include="Web References\MusicService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductCategoryService\ProductCategory.wsdl" />
+    <None Include="Web References\ProductCategoryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductService\Product.wsdl" />
+    <None Include="Web References\ProductService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RadioService\Radio.wsdl" />
+    <None Include="Web References\RadioService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StoryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StoryService\Story.wsdl" />
+    <None Include="Web References\StoryService\Story.disco" />
+    <None Include="Web References\UsersService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UsersService\Users.disco" />
+    <None Include="Web References\RadioService\Radio.disco" />
+    <None Include="Web References\MusicService\Music.disco" />
+    <Content Include="STGSignInRadio.aspx" />
+    <Content Include="UnderConstruction.aspx" />
+    <Content Include="Webservices\MerchantAddress.asmx" />
+    <Content Include="Webservices\Music.asmx" />
+    <Content Include="Webservices\MyList.asmx" />
+    <Content Include="Webservices\Product.asmx" />
+    <Content Include="Webservices\Radio.asmx" />
+    <Content Include="Webservices\Story.asmx" />
+    <Content Include="Webservices\Users.asmx" />
+    <None Include="Web References\com.apphb.dreamshopProd\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.apphb.dreamshopProd\serProduct.disco" />
+    <Content Include="Webservices\MovieDetails.asmx" />
+    <Content Include="Webservices\MovieUpload.asmx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Merchants\serMerchant.wsdl" />
+    <None Include="Service References\ServiceReference2\serBuyer.disco" />
+    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Merchants\serMerchant.disco" />
+    <None Include="Service References\Merchants\configuration91.svcinfo" />
+    <None Include="Service References\Merchants\configuration.svcinfo" />
+    <None Include="Service References\Merchants\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.apphb.dreamshopProd\serProduct.wsdl" />
+    <None Include="Web References\com.apphb.stgwifipathMovie\Movie.wsdl" />
+    <None Include="Web References\com.apphb.stgwifipathMovie\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.apphb.stgwifipath\MovieType.wsdl" />
+    <None Include="Web References\com.apphb.stgwifipath\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Video\Edem-Over-Again---GhanaMusic-com-Video[www.savevid.com].mp4" />
+    <Content Include="Webservices\Actors.asmx" />
+    <Content Include="Webservices\MovieType.asmx" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Styles\adStyle.css" />
+    <Content Include="Styles\AjaxStyleSheet.css" />
+    <Content Include="Styles\bootstrap-responsive.css" />
+    <Content Include="Styles\bootstrap-responsive.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\STG.css" />
+    <Content Include="Styles\STGAnimation.css" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference2\serBuyer.wsdl" />
+    <None Include="Web References\UsersService\Users.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutSTG.aspx.cs">
+      <DependentUpon>AboutSTG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutSTG.aspx.designer.cs">
+      <DependentUpon>AboutSTG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="access-full-knowledge.aspx.cs">
+      <DependentUpon>access-full-knowledge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="access-full-knowledge.aspx.designer.cs">
+      <DependentUpon>access-full-knowledge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSignIn2.aspx.cs">
+      <DependentUpon>AdminSignIn2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSignIn2.aspx.designer.cs">
+      <DependentUpon>AdminSignIn2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Allbloggers.aspx.cs">
+      <DependentUpon>Allbloggers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Allbloggers.aspx.designer.cs">
+      <DependentUpon>Allbloggers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\API.aspx.cs">
+      <DependentUpon>API.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\API.aspx.designer.cs">
+      <DependentUpon>API.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MovieType_GetAll.aspx.cs">
+      <DependentUpon>MovieType_GetAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MovieType_GetAll.aspx.designer.cs">
+      <DependentUpon>MovieType_GetAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PostApplications.aspx.cs">
+      <DependentUpon>PostApplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PostApplications.aspx.designer.cs">
+      <DependentUpon>PostApplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdatePostAppls.aspx.cs">
+      <DependentUpon>UpdatePostAppls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdatePostAppls.aspx.designer.cs">
+      <DependentUpon>UpdatePostAppls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Advertisers.aspx.cs">
+      <DependentUpon>Advertisers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advertisers.aspx.designer.cs">
+      <DependentUpon>Advertisers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertisingContact.aspx.cs">
+      <DependentUpon>AdvertisingContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertisingContact.aspx.designer.cs">
+      <DependentUpon>AdvertisingContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllChannels.aspx.cs">
+      <DependentUpon>AllChannels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllChannels.aspx.designer.cs">
+      <DependentUpon>AllChannels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BootstrapBundleConfig.cs" />
+    <Compile Include="Aww\Aww.aspx.cs">
+      <DependentUpon>Aww.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aww\Aww.aspx.designer.cs">
+      <DependentUpon>Aww.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndMusic\Music.aspx.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndMusic\Music.aspx.designer.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndMusic\MyList.aspx.cs">
+      <DependentUpon>MyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndMusic\MyList.aspx.designer.cs">
+      <DependentUpon>MyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndMusic\Radio.aspx.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndMusic\Radio.aspx.designer.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\BackendProducts.aspx.cs">
+      <DependentUpon>BackendProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\BackendProducts.aspx.designer.cs">
+      <DependentUpon>BackendProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Merchant.aspx.cs">
+      <DependentUpon>Merchant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Merchant.aspx.designer.cs">
+      <DependentUpon>Merchant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\MerchantAddress.aspx.cs">
+      <DependentUpon>MerchantAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\MerchantAddress.aspx.designer.cs">
+      <DependentUpon>MerchantAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\ProductCategory.aspx.cs">
+      <DependentUpon>ProductCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\ProductCategory.aspx.designer.cs">
+      <DependentUpon>ProductCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Social-Vote.aspx.cs">
+      <DependentUpon>Social-Vote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Social-Vote.aspx.designer.cs">
+      <DependentUpon>Social-Vote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UpdateBlog.aspx.cs">
+      <DependentUpon>UpdateBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UpdateBlog.aspx.designer.cs">
+      <DependentUpon>UpdateBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\ViewAllBlogs.aspx.cs">
+      <DependentUpon>ViewAllBlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\ViewAllBlogs.aspx.designer.cs">
+      <DependentUpon>ViewAllBlogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Vote.aspx.cs">
+      <DependentUpon>Vote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Vote.aspx.designer.cs">
+      <DependentUpon>Vote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogStream.aspx.cs">
+      <DependentUpon>BlogStream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogStream.aspx.designer.cs">
+      <DependentUpon>BlogStream.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMovies\BMovies.aspx.cs">
+      <DependentUpon>BMovies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMovies\BMovies.aspx.designer.cs">
+      <DependentUpon>BMovies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENHome.aspx.cs">
+      <DependentUpon>BENHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENHome.aspx.designer.cs">
+      <DependentUpon>BENHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENPage1.aspx.cs">
+      <DependentUpon>BENPage1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENPage1.aspx.designer.cs">
+      <DependentUpon>BENPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENPage2.aspx.cs">
+      <DependentUpon>BENPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildingEffNetwork\BENPage2.aspx.designer.cs">
+      <DependentUpon>BENPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="business-community\promote-offer.aspx.cs">
+      <DependentUpon>promote-offer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="business-community\promote-offer.aspx.designer.cs">
+      <DependentUpon>promote-offer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="business-community\register-merchant-account.aspx.cs">
+      <DependentUpon>register-merchant-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="business-community\register-merchant-account.aspx.designer.cs">
+      <DependentUpon>register-merchant-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Careers.aspx.cs">
+      <DependentUpon>Careers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Careers.aspx.designer.cs">
+      <DependentUpon>Careers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateInternetRadio\InternetRadio.aspx.cs">
+      <DependentUpon>InternetRadio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateInternetRadio\InternetRadio.aspx.designer.cs">
+      <DependentUpon>InternetRadio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentWiFiImplementation.aspx.cs">
+      <DependentUpon>CurrentWiFiImplementation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentWiFiImplementation.aspx.designer.cs">
+      <DependentUpon>CurrentWiFiImplementation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finnish\Finnish.Master.cs">
+      <DependentUpon>Finnish.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finnish\Finnish.Master.designer.cs">
+      <DependentUpon>Finnish.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Finnish\Kirjaudu.aspx.cs">
+      <DependentUpon>Kirjaudu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finnish\Kirjaudu.aspx.designer.cs">
+      <DependentUpon>Kirjaudu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessAndNutrition\FitnessAndNutrition.aspx.cs">
+      <DependentUpon>FitnessAndNutrition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FitnessAndNutrition\FitnessAndNutrition.aspx.designer.cs">
+      <DependentUpon>FitnessAndNutrition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Friends.aspx.cs">
+      <DependentUpon>Friends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Friends.aspx.designer.cs">
+      <DependentUpon>Friends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunnyImgs.aspx.cs">
+      <DependentUpon>FunnyImgs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FunnyImgs.aspx.designer.cs">
+      <DependentUpon>FunnyImgs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Funny\Funny.aspx.cs">
+      <DependentUpon>Funny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Funny\Funny.aspx.designer.cs">
+      <DependentUpon>Funny.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gaming\Gaming.aspx.cs">
+      <DependentUpon>Gaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gaming\Gaming.aspx.designer.cs">
+      <DependentUpon>Gaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page1.aspx.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page1.aspx.designer.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page2.aspx.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page2.aspx.designer.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page3.aspx.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page3.aspx.designer.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page4.aspx.cs">
+      <DependentUpon>Page4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page4.aspx.designer.cs">
+      <DependentUpon>Page4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page5.aspx.cs">
+      <DependentUpon>Page5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page5.aspx.designer.cs">
+      <DependentUpon>Page5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GhanaNews\Page6.aspx.cs">
+      <DependentUpon>Page6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GhanaNews\Page6.aspx.designer.cs">
+      <DependentUpon>Page6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HealthyLiving\HealthyLiving.aspx.cs">
+      <DependentUpon>HealthyLiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthyLiving\HealthyLiving.aspx.designer.cs">
+      <DependentUpon>HealthyLiving.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvestorRelations.aspx.cs">
+      <DependentUpon>InvestorRelations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvestorRelations.aspx.designer.cs">
+      <DependentUpon>InvestorRelations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LifeStyle.aspx.cs">
+      <DependentUpon>LifeStyle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LifeStyle.aspx.designer.cs">
+      <DependentUpon>LifeStyle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessagAndCalls.aspx.cs">
+      <DependentUpon>MessagAndCalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessagAndCalls.aspx.designer.cs">
+      <DependentUpon>MessagAndCalls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movies.aspx.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movies.aspx.designer.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage1.aspx.cs">
+      <DependentUpon>MusicPage1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage1.aspx.designer.cs">
+      <DependentUpon>MusicPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage10.aspx.cs">
+      <DependentUpon>MusicPage10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage10.aspx.designer.cs">
+      <DependentUpon>MusicPage10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage11.aspx.cs">
+      <DependentUpon>MusicPage11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage11.aspx.designer.cs">
+      <DependentUpon>MusicPage11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage2.aspx.cs">
+      <DependentUpon>MusicPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage2.aspx.designer.cs">
+      <DependentUpon>MusicPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage3.aspx.cs">
+      <DependentUpon>MusicPage3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage3.aspx.designer.cs">
+      <DependentUpon>MusicPage3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage4.aspx.cs">
+      <DependentUpon>MusicPage4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage4.aspx.designer.cs">
+      <DependentUpon>MusicPage4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage5.aspx.cs">
+      <DependentUpon>MusicPage5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage5.aspx.designer.cs">
+      <DependentUpon>MusicPage5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage6.aspx.cs">
+      <DependentUpon>MusicPage6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage6.aspx.designer.cs">
+      <DependentUpon>MusicPage6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage7.aspx.cs">
+      <DependentUpon>MusicPage7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage7.aspx.designer.cs">
+      <DependentUpon>MusicPage7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage8.aspx.cs">
+      <DependentUpon>MusicPage8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage8.aspx.designer.cs">
+      <DependentUpon>MusicPage8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicPage9.aspx.cs">
+      <DependentUpon>MusicPage9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicPage9.aspx.designer.cs">
+      <DependentUpon>MusicPage9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBlog.aspx.cs">
+      <DependentUpon>MyBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyBlog.aspx.designer.cs">
+      <DependentUpon>MyBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBlogSignIn.aspx.cs">
+      <DependentUpon>MyBlogSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyBlogSignIn.aspx.designer.cs">
+      <DependentUpon>MyBlogSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar.aspx.cs">
+      <DependentUpon>Navbar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar.aspx.designer.cs">
+      <DependentUpon>Navbar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar.Master.cs">
+      <DependentUpon>Navbar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar.Master.designer.cs">
+      <DependentUpon>Navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAfrica.aspx.cs">
+      <DependentUpon>NewsAfrica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAfrica.aspx.designer.cs">
+      <DependentUpon>NewsAfrica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsGhana.aspx.cs">
+      <DependentUpon>NewsGhana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsGhana.aspx.designer.cs">
+      <DependentUpon>NewsGhana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsSports.aspx.cs">
+      <DependentUpon>NewsSports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsSports.aspx.designer.cs">
+      <DependentUpon>NewsSports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalFinance\Personalfinance.aspx.cs">
+      <DependentUpon>Personalfinance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalFinance\Personalfinance.aspx.designer.cs">
+      <DependentUpon>Personalfinance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pics\Pics.aspx.cs">
+      <DependentUpon>Pics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pics\Pics.aspx.designer.cs">
+      <DependentUpon>Pics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostSuccessful.aspx.cs">
+      <DependentUpon>PostSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostSuccessful.aspx.designer.cs">
+      <DependentUpon>PostSuccessful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFound.aspx.cs">
+      <DependentUpon>ProductFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductFound.aspx.designer.cs">
+      <DependentUpon>ProductFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\DataTraveller.aspx.cs">
+      <DependentUpon>DataTraveller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\DataTraveller.aspx.designer.cs">
+      <DependentUpon>DataTraveller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Relationship\Relationship.aspx.cs">
+      <DependentUpon>Relationship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relationship\Relationship.aspx.designer.cs">
+      <DependentUpon>Relationship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RSS.aspx.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RSS.aspx.designer.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndMarketing\SalesAndMarketing.aspx.cs">
+      <DependentUpon>SalesAndMarketing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesAndMarketing\SalesAndMarketing.aspx.designer.cs">
+      <DependentUpon>SalesAndMarketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Merchants\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor.aspx.cs">
+      <DependentUpon>Sponsor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sponsor.aspx.designer.cs">
+      <DependentUpon>Sponsor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\StartUp.aspx.cs">
+      <DependentUpon>StartUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StartUp\StartUp.aspx.designer.cs">
+      <DependentUpon>StartUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STGShop.aspx.cs">
+      <DependentUpon>STGShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STGShop.aspx.designer.cs">
+      <DependentUpon>STGShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STGShop2.aspx.cs">
+      <DependentUpon>STGShop2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STGShop2.aspx.designer.cs">
+      <DependentUpon>STGShop2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STGSignIn2.aspx.cs">
+      <DependentUpon>STGSignIn2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STGSignIn2.aspx.designer.cs">
+      <DependentUpon>STGSignIn2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STGSignInRadio.aspx.cs">
+      <DependentUpon>STGSignInRadio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STGSignInRadio.aspx.designer.cs">
+      <DependentUpon>STGSignInRadio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnderConstruction.aspx.cs">
+      <DependentUpon>UnderConstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnderConstruction.aspx.designer.cs">
+      <DependentUpon>UnderConstruction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AllRegisteredUsers.aspx.cs">
+      <DependentUpon>AllRegisteredUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\AllRegisteredUsers.aspx.designer.cs">
+      <DependentUpon>AllRegisteredUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.apphb.dreamshopProd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.apphb.stgwifipathMovie\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.apphb.stgwifipathMyList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.apphb.stgwifipath\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiMerchantAddress\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiMerchant\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiMusic\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiProductCategory\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiProduct\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiRadio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiStory\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.stgwifiUsers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MerchantAddressService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MerchantService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MusicService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductCategoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RadioService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UsersService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Webservices\Actors.asmx.cs">
+      <DependentUpon>Actors.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Merchant.asmx.cs">
+      <DependentUpon>Merchant.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\MerchantAddress.asmx.cs">
+      <DependentUpon>MerchantAddress.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\MovieDetails.asmx.cs">
+      <DependentUpon>MovieDetails.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\MovieType.asmx.cs">
+      <DependentUpon>MovieType.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\MovieUpload.asmx.cs">
+      <DependentUpon>MovieUpload.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Music.asmx.cs">
+      <DependentUpon>Music.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\MyList.asmx.cs">
+      <DependentUpon>MyList.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Product.asmx.cs">
+      <DependentUpon>Product.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\ProductCategory.asmx.cs">
+      <DependentUpon>ProductCategory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Radio.asmx.cs">
+      <DependentUpon>Radio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Story.asmx.cs">
+      <DependentUpon>Story.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Webservices\Users.asmx.cs">
+      <DependentUpon>Users.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WiFi\LocationLogIns.aspx.cs">
+      <DependentUpon>LocationLogIns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WiFi\LocationLogIns.aspx.designer.cs">
+      <DependentUpon>LocationLogIns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WiFi\WiFiPlan.aspx.cs">
+      <DependentUpon>WiFiPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WiFi\WiFiPlan.aspx.designer.cs">
+      <DependentUpon>WiFiPlan.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="cssfolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Thumbs.db" />
+    <None Include="jquery\external\bgiframe\META.json" />
+    <Content Include="jquery\external\cookie\jquery.cookie.zip" />
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Merchants\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:11807/Webservices/MerchantAddress.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MerchantAddressService\</RelPath>
+      <UpdateFromURL>http://localhost:11807/Webservices/MerchantAddress.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_MerchantAddressService_MerchantAddress</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:18597/Webservices/Merchant.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MerchantService\</RelPath>
+      <UpdateFromURL>http://localhost:18597/Webservices/Merchant.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_MerchantService_Merchant</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:21476/Webservices/Product.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductService\</RelPath>
+      <UpdateFromURL>http://localhost:21476/Webservices/Product.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_ProductService_Product</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:57306/Webservices/Music.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MusicService\</RelPath>
+      <UpdateFromURL>http://localhost:57306/Webservices/Music.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_MusicService_Music</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:57306/Webservices/Radio.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RadioService\</RelPath>
+      <UpdateFromURL>http://localhost:57306/Webservices/Radio.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_RadioService_Radio</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:57306/Webservices/Story.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StoryService\</RelPath>
+      <UpdateFromURL>http://localhost:57306/Webservices/Story.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_StoryService_Story</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:57306/Webservices/Users.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UsersService\</RelPath>
+      <UpdateFromURL>http://localhost:57306/Webservices/Users.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_UsersService_Users</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:9482/Webservices/ProductCategory.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductCategoryService\</RelPath>
+      <UpdateFromURL>http://localhost:9482/Webservices/ProductCategory.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_ProductCategoryService_ProductCategory</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Merchant.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiMerchant\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Merchant.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiMerchant_Merchant</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/MerchantAddress.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiMerchantAddress\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/MerchantAddress.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiMerchantAddress_MerchantAddress</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Music.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiMusic\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Music.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiMusic_Music</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Product.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiProduct\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Product.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiProduct_Product</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/ProductCategory.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiProductCategory\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/ProductCategory.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiProductCategory_ProductCategory</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Radio.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiRadio\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Radio.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiRadio_Radio</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Story.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiStory\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Story.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiStory_Story</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifi.com/Webservices/Users.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.stgwifiUsers\</RelPath>
+      <UpdateFromURL>http://stgwifi.com/Webservices/Users.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_stgwifiUsers_Users</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifipath.apphb.com/Webservices/Movie.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.apphb.stgwifipathMovie\</RelPath>
+      <UpdateFromURL>http://stgwifipath.apphb.com/Webservices/Movie.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_apphb_stgwifipathMovie_Movie</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifipath.apphb.com/Webservices/MovieType.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.apphb.stgwifipath\</RelPath>
+      <UpdateFromURL>http://stgwifipath.apphb.com/Webservices/MovieType.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_apphb_stgwifipath_MovieType</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://stgwifipath.apphb.com/Webservices/MyList.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.apphb.stgwifipathMyList\</RelPath>
+      <UpdateFromURL>http://stgwifipath.apphb.com/Webservices/MyList.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_apphb_stgwifipathMyList_MyList</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://dreamshop.apphb.com/WebServices/serProduct.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.apphb.dreamshopProd\</RelPath>
+      <UpdateFromURL>https://dreamshop.apphb.com/WebServices/serProduct.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>stgWifi8_com_apphb_dreamshopProd_serProduct</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19670</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

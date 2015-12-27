@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>stgwifi&gt;login_home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<style type="text/css">
+body {
+	color: #737373;
+	font-size: 10px;
+	font-family: verdana;
+	background-image: url(img/backg3.png);
+}
+
+textarea,input,select {
+background-color: #FDFBFB;
+border: 1px solid #BBBBBB;
+padding: 2px;
+margin: 1px;
+font-size: 14px;
+color: #808080;
+}
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 12px; }
+a:hover {
+	border-bottom: 1px dotted #c1c1c1;
+	color: #FFFFFF;
+}
+img {border: none;}
+td {
+	font-size: 14px;
+	color: #000000;
+	margin: auto;
+}
+.bodycontainer {
+	height: auto;
+	width: auto;
+	background-image: none;
+}
+.navbar {
+	background-color: #06F;
+	height: 30px;
+	width: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	margin: 5px;
+	text-align: left;
+	word-spacing: 2em;
+	font-weight: bold;
+	vertical-align: baseline;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+.toprowcontainer {
+	height: 200px;
+	width: 1200px;
+}
+.toprowcolumnone {
+	height: 150px;
+	width: 200px;
+	float: left;
+	margin: 5px;
+	padding: 10px;
+}
+.toprowcolumntwo {
+	height: 200px;
+	width: 700px;
+	float: left;
+	margin: auto;
+}
+.toprowcolumnthree {
+	background-color: #F3F;
+	float: left;
+	height: 150px;
+	width: auto;
+}
+.toprowcolumnfour {
+	background-color: #9FC;
+	float: left;
+	height: 150px;
+	width: auto;
+}
+.logintable {
+	height: auto;
+	width: 280px;
+	margin: auto;
+	clear: both;
+	padding-top: 20px;
+	text-align: center;
+}
+div {
+	margin: auto;
+	width: 300px;
+}
+div {
+	margin: auto;
+	width: 300px;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #FFF;
+}
+.notice {
+	text-align: center;
+}
+td {
+	margin: auto;
+}
+.aboveloginnotice {
+	height: 20px;
+	width: auto;
+}
+.footercontainer {
+	height: 400px;
+	width: 1200px;
+	margin-top: 50px;
+	color: #999;
+}
+.footercolone {
+	background-color: #333;
+	height: 350px;
+	width: 250px;
+	float: left;
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.footercoltwo {
+	background-color: #333;
+	height: 300px;
+	width: 300px;
+	margin-left: 1px;
+	float: left;
+	font-size: 11px;
+	text-align: left;
+	padding: 10px;
+}
+.footercolthree {
+	background-color: #333;
+	float: left;
+	height: 300px;
+	width: 290px;
+	font-size: 11px;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.footercolfour {
+	background-color: #333;
+	float: left;
+	height: 350px;
+	width: 250px;
+	margin-left: 1px;
+	padding: 10px;
+	font-size: 11px;
+	text-align: right;
+}
+.footercopyright {
+	background-color: #000;
+	height: 50px;
+	width: 1000px;
+}
+.afterlogin {
+	height: 40px;
+	width: 1000px;
+}
+.afternavbar {
+	height: 20px;
+	width: 1200px;
+}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/mhrotator.js"></script>
+<script type="text/javascript" src="js/initrotator.js"></script>
+<link rel="stylesheet" href="js/mhrotator.css" type="text/css" />
+</head>
+
+<body>
+
+<div class="bodycontainer">
+
+$(if chap-id)
+<form name="sendin" action="$(link-login-only)" method="post">
+	<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="http://stgwifi.com/Movies.aspx" />
+		<input type="hidden" name="popup" value="true" />
+  </form>
+	
+  <script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<div align="center">
+<h2>WELCOME to STGWIFI Hotspot</h2>
+</div>
+<div class="navbar"><a href="login.html">Home</a> <a href="coverage.html">Coverage</a> <a href="services.html">Services</a> <a href="shops.html">Shops</a> <a href="free.html">Free</a></div>
+<div class="afternavbar"></div>
+
+<div class="toprowcontainer">
+  <div class="toprowcolumnone"><img src="img/stglogosm.png" width="192" height="90" alt="stglogo" /></div>
+  <div class="toprowcolumntwo"><div id="mhrotator">
+<style type="text/css"> #mhrotator img { display:none; } </style>
+<img src="images/stgwifisplash01.png" title="stgwifisplash01" />
+<img src="images/stgwifisplash02.png" title="stgwifisplash02" />
+<img src="images/stgwifisplash03.png" title="stgwifisplash03" />
+<img src="images/stgwifisplash04.png" title="stgwifisplash04" />
+
+</div>
+</div>
+  <div class="toprowcolumnthree"></div>
+  <div class="toprowcolumnfour"></div>
+  
+</div>
+<div class="aboveloginnotice"></div>
+
+
+<div class="notice" style="color: #FFFFFF; font-size: 12px">Please log on to use the internet hotspot service<br />
+$(if trial == 'yes')Free trial available, <a style="color: #FF8080"href="free.html">click here</a>.$(endif)</div>
+
+
+<div class="logintable">
+
+<td align="center" valign="bottom" height="200" colspan="2">
+					<form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="http://stgwifi.com/Movies.aspx" />
+						<input type="hidden" name="popup" value="true" />
+						
+							<table width="120" style="background-color: #CC33FF">
+								<tr><td align="right">login</td>
+										<td><input style="width: 80px" name="username" type="text" value="$(username)"/></td>
+								</tr>
+								<tr><td align="right">password</td>
+										<td><input style="width: 80px" name="password" type="password"/></td>
+								</tr>
+								<tr><td>&nbsp;</td>
+										<td><input type="submit" value="OK" /></td>
+								</tr>
+							</table>
+					</form>
+	</td>
+			</tr>
+			<tr><td align="center"></td>
+
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+
+<div class="afterlogin"></div>
+
+
+<div class="footercontainer">
+  <div class="footercolone">
+    <h2>CONTACT</h2><br /><u>MAIN OFFICE</u><br /><br />Show Thy Glory<br />Chief Quaye's House<br />
+      BH 22/8<br /> Babianeha<br /> Agona Swedru<br /><br /><u>Telephone</u><br /><br />0332021453 <br />0507251869 <br />0572905741
+    
+  </div>
+  <div class="footercoltwo">
+    <h2>THE MOST AFFORDABLE & EFFICIENT INTERNET NETWORK</h2><br /><br /><h2>Easy To Subscribe & Join</h2>
+  </div>
+
+  <div class="footercolthree"><h2>SPECIAL PROMO</h2><br /> Organise  a group of 10 people in your community and Hotspot shall be installed for your use at your doorsteps at NO COST.<br />You ONLY have to buy Voucher OR pay for Subscription.</div>
+  <div class="footercolfour"><h2>PACKAGES</h2><br /><u>VOUCHER</u><br />1 Hour =  GhC 0.50<br />
+
+12 Hours = GhC 2.00<br />
+24 Hours = GhC 3.00<br /><br /><br /><u>SUBSCRIPTION</u><br />
+7 Days = GhC 20.00<br />
+30 Days = GhC 70.00<br /><br /><u>FREE BROWSING HOURS</u><br />
+<a href="free.html">For Free Browsing Hours Click Here</a>.<br />
+<br /><br /> SUBSCRIBE or RECHARGE with TIGO CASH.<br /><br />
+<a href="shops.html">For How To Send Tigo Cash click here</a> Or Call 0572905741<br /></div>
+   
+  
+ 
+
+</div>
+<div class="footercopyright"><br /><div style="color: #c1c1c1; font-size: 9px">Designed & Powered by STGWIFI</div>
+	$(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)</div>
+
+
+</div>
+
+</body>
+</html>

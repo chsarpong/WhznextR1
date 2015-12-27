@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="stgWifi8.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="stgWifi8_com_apphb_stgwifipath_MovieType" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifipath.apphb.com/Webservices/MovieType.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_apphb_stgwifipathMovie_Movie" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifipath.apphb.com/Webservices/Movie.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_apphb_dreamshopProd_serProduct" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dreamshop.apphb.com/WebServices/serProduct.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_apphb_stgwifipathUsers_Users" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://stgwifipath.apphb.com/Webservices/Users.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_StoryService_Story" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:57306/Webservices/Story.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_UsersService_Users" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:57306/Webservices/Users.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_RadioService_Radio" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:57306/Webservices/Radio.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_MusicService_Music" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:57306/Webservices/Music.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_apphb_stgwifipathMyList_MyList" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifipath.apphb.com/Webservices/MyList.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiUsers_Users" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Users.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiRadio_Radio" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Radio.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiMusic_Music" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Music.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiStory_Story" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Story.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiProductCategory_ProductCategory" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/ProductCategory.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_ProductCategoryService_ProductCategory" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9482/Webservices/ProductCategory.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_ProductService_Product" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:21476/Webservices/Product.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiProduct_Product" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Product.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiMerchant_Merchant" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com/Webservices/Merchant.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_MerchantService_Merchant" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:18597/Webservices/Merchant.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_MerchantAddressService_MerchantAddress" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:11807/Webservices/MerchantAddress.asmx</Value>
+    </Setting>
+    <Setting Name="stgWifi8_com_stgwifiMerchantAddress_MerchantAddress" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://stgwifi.com:15531/Webservices/MerchantAddress.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,56 @@
+﻿body {
+}
+
+.divanimate
+{
+
+background:rgba(0, 0, 0, 0.25);
+animation:myfirst 8s;
+-moz-animation:myfirst 6s; /* Firefox */
+-webkit-animation:myfirst 7s; /* Safari and Chrome */
+-o-animation:myfirst 5s; /* Opera */
+}
+
+@keyframes myfirst
+{
+from {background:rgba(0, 0, 0, 0.25);}
+to {background:linear-gradient(to bottom, #62c462, #51a351);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {background:rgba(0, 0, 0, 0.25);}
+to {background:linear-gradient(to bottom, #62c462, #51a351);}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {background:rgba(0, 0, 0, 0.25);}
+to {background:linear-gradient(to bottom, #62c462, #51a351);}
+}
+
+.textanimate
+{
+width:100px;
+height:100px;
+
+position:relative;
+animation:mymove 5s;
+animation-delay:2s;
+
+/*Safari and Chrome*/
+-webkit-animation:mymove 5s infinite;
+-webkit-animation-delay:2s;
+}
+
+@keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {left:0px;}
+to {left:200px;}
+}

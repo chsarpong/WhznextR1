@@ -1,0 +1,449 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="stgWifi8.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="Images/favicon.ico" />
+<!-- Facebook Conversion Code for Promote your website -->
+<script>    (function () {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6022151823033', { 'value': '0.01', 'currency': 'EUR'}]);
+</script>
+<!-- Facebook Custom Audience pixel website -->
+<script>    (function () {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '1503674439895575']);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1503674439895575&amp;ev=PixelInitialized" /></noscript>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6022151823033&amp;cd[value]=0.01&amp;cd[currency]=EUR&amp;noscript=1" alt="" /></noscript>
+    <title>Whznext - My Blog </title>
+    <meta content="Find collection of what's new and popular on the web.">
+  <%--  <meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+        <!-- Le styles -->
+    
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+        .container-narrow2 {
+        margin: 0 auto;
+        max-width:1194px;
+        margin-left:325px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+      .paragraphfooter {
+        margin-top:30px;
+        margin-left:-915px;
+        }
+        .hrclass
+        {
+           width:1224px;
+           margin-left:0px; 
+        }
+        .marright
+        {
+          margin-right:-120px;  
+        }
+        .logo
+        {
+            height: 35.5px;
+            width: 158px;
+            margin-bottom: 10px;
+            margin-left: -1px;
+            position: static;
+            background-image: linear-gradient(to bottom, #fff, #fff);
+            background-repeat: repeat;
+            margin-top: -13px;
+            /* padding: 15px 15px; */
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 20px;
+        }
+        .navown
+        {
+         margin-left:195px;
+         margin-top:-50px; 
+         width:1300px;
+         border-bottom: 1px solid #133783;  
+         -webkit-box-shadow:0 2px 2px -2px rgba(0, 0, 0, .52)
+        }
+        .glycon1
+        {
+           background-image:url('../Images/searchicon.png');
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:inherit;
+           background-color:White;
+        }
+         .glyconwifi
+        {
+           /*background-image:url('../glyphicons_free/glyphicons/png/glyphicons_032_wifi_alt.png');*/
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:center;
+           background-color:#3a5795;
+           color:White;
+        }
+          .glyconmusic
+        {
+           /*background-image:url('../glyphicons_free/glyphicons/png/glyphicons_017_music.png');*/
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:center;
+           background-color:#3a5795;
+           color:White;
+        }
+          .glyconhome
+        {
+           /*background-image:url('../glyphicons_free/glyphicons/png/glyphicons_020_home.png');*/
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:center;
+           background-color:#3a5795;
+           color:White;
+           margin-left:0px;
+           /*border-color:#3a5795;*/
+        }
+          .glyconplaces
+        {
+           background-image:url('../glyphicons_free/glyphicons/png/glyphicons_276_cutlery.png');
+           background-repeat: no-repeat;
+           background-position:center;
+           height:40px;
+           width:100px;
+           padding-left:6px;
+           text-align:inherit;
+           background-color:White;
+        }
+         .glyconblog
+        {
+           /*background-image:url('../glyphicons_free/glyphicons/png/glyphicons_071_book.png');*/
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:100px;
+           padding-left:6px;
+           text-align:center;
+           background-color:#3a5795;
+           color:White;
+        }
+         .glyconapi
+        {
+           /*background-image:url('../glyphicons_free/glyphicons/png/glyphicons_463_server.png');*/
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:center;
+           background-color:#3a5795;
+           color:White;
+           margin-left:98px;
+        }
+        .bkcolor
+        {
+          background-color:#fff;
+         /*background-color:#3a5795;*/ 
+         height:50px; 
+         background-image:linear-gradient(to bottom, #fff, #fff);
+         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+         -webkit-box-shadow:0 2px 2px -2px rgba(0, 0, 0, .52);
+        }
+        .moverightNew
+        {
+         margin-left:-1290px; 
+         margin-top:-55px;  
+        }
+        .moverightlike
+        {
+         margin-left:800px; 
+         margin-top:-15px;  
+        }
+        .search
+        {
+         margin-top:8px;
+         margin-left:-2px;
+         width:345px;  
+        }
+        .glyconsearch
+        {
+           background-image:url('../glyphicons_free/glyphicons/png/glyphicons_027_search.png');
+           background-repeat: no-repeat;
+           background-position:center;
+           height:30px;
+           width:90px;
+           padding-left:6px;
+           text-align:inherit;
+           background-color:White;
+        }
+        .navbar-brand2 {
+            float: left;
+            height: 50px;
+            padding: 13px 15px;
+            font-size: 28px;
+            line-height: 20px;
+            font-weight:600;
+            color: #777;
+        }
+        .container2New {
+         margin-left:50px;
+        }
+        .stgNew
+        {
+          margin-left:-1060px;
+          white-space:nowrap;
+        }
+        .aboutNew
+        {
+         color:Black;
+         text-decoration:underline; 
+        }
+        .businessNew
+        {
+         color:Black;
+         text-decoration:underline;   
+        }
+        .footerNew
+        {
+        color: #4e5766;
+        padding: 8px 0px 0px 0px;
+        margin: 0px auto;
+        text-align: center;
+        line-height: normal;
+        margin-left:130px;
+        }
+        .hrclassNew
+        {
+           width:990px;
+           margin-left:-150px; 
+        }
+    </style>
+   <%--  <script src="bootstrap-3.3.2-dist/js/bootstrap.js" type="text/javascript"></script>--%>
+    <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="bootstrap-3.3.2-dist/js/npm.js" type="text/javascript"></script>
+
+    <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/AjaxStyleSheet.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="Scripts/autoScroll.js" type="text/javascript"></script>
+   <%-- new--%>
+    <link href="Styles/assets/css/docs.css" rel="stylesheet">
+    <link href="code-prettify-master/src/prettify.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<%--    <link href="bootstrap-3.3.2-dist/css/bootstrap.css" rel="stylesheet"type="text/css" />--%>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <%--  new--%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../assets/ico/favicon.png"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+     <div class="page">
+     <asp:ScriptManager ID="ScriptManager2" runat="server">
+        <Services>
+        <asp:ServiceReference Path="Webservices/Radio.asmx" />
+        <asp:ServiceReference Path="Webservices/Product.asmx" />
+        </Services>
+     </asp:ScriptManager>
+
+      <asp:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server"
+        TargetControlID="tbSearch"
+                ServicePath="Webservices/Product.asmx" 
+                ServiceMethod="Product_GetAllBlogsForRssAutocomplete"
+                MinimumPrefixLength="0" 
+                CompletionInterval="100"
+                EnableCaching="true"
+                CompletionSetCount="1"
+                CompletionListCssClass="autocomplete_completionListElement"
+                CompletionListItemCssClass="autocomplete_listItem"
+                CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
+                ShowOnlyCurrentWordInCompletionListItem="true" >
+    </asp:AutoCompleteExtender>
+
+    <div class="navbar navbar-default navbar-fixed-top bkcolor" role="navigation">
+    <div class="container">
+    <div class="navbar-header"> 
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <label class="navbar-brand2">Whznext</label>
+<%--        <a class="navbar-brand2" href="../Default.aspx" rel="nofollow">Whznext</a>--%>
+        <%--<a class="navbar-brand" href="../Default.aspx" rel="nofollow"><img class="logo" src="../summarize/img/Fin_JOE-3.png" alt="" height="30px" /></a>--%>
+     </div>
+     <div class="navbar-collapse collapse">
+     <ul class="nav navbar-nav navbar-right">
+
+         <asp:TextBox ID="tbSearch" runat="server" CssClass="search" placeholder="Click here to find something interesting happening on the internet from experts in your community....." Width="650px" Height="29px" Visible="True"></asp:TextBox>
+    <asp:Button ID="btSearch" runat="server" Text="" CssClass="glycon1" ToolTip="Search" onclick="btSearch_Click"></asp:Button>
+<%--     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="" 
+            PostBackUrl="~/Default.aspx">Home</asp:LinkButton>   --%> 
+    <asp:Button ID="Button9" runat="server" Text="Home" CssClass="glyconhome" 
+            PostBackUrl="~/BlogStream.aspx" ToolTip="Home"></asp:Button>
+     <%--<asp:LinkButton ID="LinkButton2" runat="server" CssClass="" 
+            PostBackUrl="~/BlogStream.aspx"></asp:LinkButton>  --%>
+        <asp:Button ID="Button10" runat="server" Text="Publishers" ToolTip="For creating blogs and websites" CssClass="glyconblog" 
+            PostBackUrl="~/BackEnd/BackendProducts.aspx"></asp:Button>
+<%--    <asp:Button ID="Button10" runat="server" Text="What's Next" ToolTip="Blogs/Magazines" CssClass="glyconblog" 
+            PostBackUrl="~/BlogStream.aspx"></asp:Button>--%>
+<%--~/BlogStream.aspx--%>
+ <%--      <asp:Button ID="Button8" runat="server" Text="Marketplace" CssClass="glyconmusic" 
+            PostBackUrl="~/STGShop2.aspx" ToolTip="Marketplace"></asp:Button>--%>
+         <%--   ~/Movies.aspx--%>
+<%--       <asp:Button ID="Button11" runat="server" Text="" CssClass="glyconplaces" 
+            PostBackUrl="~/BlogStream.aspx" ToolTip="Places"></asp:Button>--%>
+          <%--  ~/STGShop2.aspx--%>
+<%--        <asp:Button ID="Button1" runat="server" Text="WiFi" CssClass="glyconwifi" 
+            PostBackUrl="~/WiFi/LocationLogIns.aspx" ToolTip="WiFi"></asp:Button>--%>
+            <%--~/WiFi/LocationLogIns.aspx--%>
+    <asp:Button ID="Button12" runat="server" Text="Readers" CssClass="glyconapi" 
+            PostBackUrl="~/access-full-knowledge.aspx" ToolTip="For getting expert knowledge"></asp:Button>
+            <%--~/STGSignIn2.aspx--%>
+     </ul>
+      </div>
+     <%-- Initial--%>
+<%--    <div class="logo">
+      <a href="../Default.aspx" rel="nofollow"><img class="logo" src="../summarize/img/Fin_JOE-3.png" alt="" height="30px" /></a>
+    </div>
+    <div class="navown">
+    
+    </div>--%>
+   
+</div>
+    </div>
+  
+ 
+     <div class="main">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"/>
+     </div>
+
+
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-button.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-typeahead.js"></script>
+
+  <%--      </asp:ContentPlaceHolder>--%>
+
+<div class="footerNew">
+          <div class="container2New">
+            <hr class="hrclassNew"/>
+           <p class="stgNew">
+            <a class="aboutNew" href="../Theme%2016/Advetise.html">&copy; What's Next 2015</a>
+           <%--<a class="about" href="../AboutSTG.aspx">About</a>--%>
+           <%--<a class="business" href="../InvestorRelations.aspx">Business</a>--%>
+           <a class="aboutNew" href="../Theme%2016/index.html">About</a>
+           <a class="businessNew" href="../Theme%2016/Join-Business-Community.html" target="_blank"">Business</a>
+           <a class="businessNew" href="~/Admin/AdminSignIn2.aspx" target="_blank"">Developers</a>
+           
+           </p>
+           <div class="fb-like moverightNew" data-href="https://www.facebook.com/STGWiFi?ref=hl" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+           <br /><br />
+   </div>  
+</div>
+
+      <%--<div class="footer">
+          <div class="container">
+            <hr class="hrclass"/>
+            <p class="paragraphfooter">&copy; STG WIFI 2013</p>
+            <p class="pull-right3"><a href="../Careers.aspx">Careers</a></p>
+            <p class="pull-right4"><a href="../InvestorRelations.aspx">Investor relations</a></p>
+            <p class="pull-right5"><a href="../Advertisers.aspx">Advertisers</a></p>
+            <p class="pull-right2"><a href="#" onclick="return false;" onmousedown="resetScroller('myheading');">Back to top</a></p>
+          </div>
+        </div>--%>
+    </div>
+    </form>
+</body>
+</html>
